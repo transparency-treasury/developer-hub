@@ -1,6 +1,6 @@
-name: CFPB API Docs
+name: Developer Hub
 markdown: maruku
 pygments: true
 safe: true
-baseurl: /api/
+baseurl: /developer-hub
 exclude: ['.ruby-version', 'node_modules', 'package.json', 'bower.json']
