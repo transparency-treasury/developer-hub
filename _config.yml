@@ -2,5 +2,5 @@ name: Developer Hub
 markdown: maruku
 pygments: true
 safe: true
-baseurl: /developer-hub
+baseurl: /
 exclude: ['.ruby-version', 'node_modules', 'package.json', 'bower.json']
