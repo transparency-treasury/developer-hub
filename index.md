@@ -6,14 +6,13 @@ layout: default
 
 ### Overview
 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam imperdiet tempor enim, vitae volutpat eros. Integer non tincidunt arcu. Vestibulum at rutrum metus. This data is important because:
 
-Each year thousands of banks and other financial institutions report data about mortgages to the public as part of the [Home Mortgage Disclosure Act (HMDA)](http://www.consumerfinance.gov/hmda/#video). This data is important because:
+- Donec neque lorem, vestibulum in tortor sed;
+- Elementum consequat ipsum. Mauris quam purus, feugiat vitae tortor in; and
+- Aliquet venenatis nulla. Nam massa diam, rutrum rutrum cursus eu.
 
-- It helps show whether lenders are serving the housing needs of their communities;
-- It gives public officials insight that helps them make informed decisions about policies; and
-- It sheds light on lending patterns that could be discriminatory
-
-The CFPB provides every year of the Loan Application Register (LAR) data since 2007. That adds up to about 15 to 20 million records every year, and we think that you could build something really cool with it. 
+Donec quis eros accumsan, aliquet justo ut, convallis eros. Etiam justo enim, blandit eget rhoncus id, tincidunt id ipsum. Pellentesque vehicula feugiat turpis, ac sodales velit ultrices eget. Nam posuere quam nec odio tincidunt, et egestas nulla scelerisque. 
 
 ##### Get started
 We built the API to be as self-documenting as possible, but if you find yourself overwhelmed, we organized this site into four major areas.
@@ -23,16 +22,16 @@ We built the API to be as self-documenting as possible, but if you find yourself
 - [Query language](queries.html) contains a comprehensive listing of all the API's types, functions, and enumerations.
 - [Field reference](fields.html) lists and describes the type of information reported in the LAR.
 
-##### The HMDA API and Qu
-
+<!--
 [HMDA](http://www.consumerfinance.gov/hmda) is the CFPB's first dataset to publish using [Qu](http://cfpb.github.io/qu/), an in-progress data platform created to serve public data.
 
 Qu is the first CFPB project built from the beginning on [GitHub](https://github.com/cfpb/), too. If you think you can make the API better–or just want to take a look under the hood–check it out, and learn about how you can host your own datasets or contribute to the project. 
 
+
 <ul class="repo-list">
   <li class="list-icon">
     <p class="image-wrap">
-      <img src="../static/img/octocat.png" width="25px" title="Github">
+      <img src="http://usg-website-templates.github.io/developer-hub/static/img/octocat.png" width="25px" title="Github">
     </p>
   </li>
   <li>
@@ -42,7 +41,8 @@ Qu is the first CFPB project built from the beginning on [GitHub](https://github
     </a>
   </li>
 </ul>
+-->
 <body id="overview"></body>
 
 
-Not interested in programming? You can still get the data! Visit the [explore the data](http://www.consumerfinance.gov/hmda/explore) section of our HMDA site, where you can create [custom data sets](http://consumerfinance.gov/hmda/explore.html) for download.
+Not interested in programming? You can still get the data! Visit the [explore the data](URL_of_data).
