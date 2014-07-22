@@ -17,7 +17,7 @@ $(function() {
     var $body = $(this);
 
     var ajax = $.ajax({
-      url: "../static/hmda_lar.json",
+      url: "http://usg-website-templates.github.io/developer-hub/static/hmda_lar.json",
       dataType: "json"
     });
 
