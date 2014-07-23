@@ -1,16 +1,14 @@
-Public Data Platform
+Template Developer Hub 
 ====================
 
+*Note - This is an effort to make a vanilla version of [CFPB's outstanding API documentation](https://github.com/cfpb/api).  Though many of the references to the agency (and it's HMDA system) have been genericized, a number remain.  In particular, the `Basics`, `Console`, and `Queries` page have mostly been kept intact in order to show how those pages can work.  An agency re-using this would need to fully migrate that material to fit their API.*
 
+----
 
-This is the documentation repository for the Home Mortgage Disclosure Act (HMDA) dataset served by the Public Data Platform API.
-Check out this API documentation at https://cfpb.github.io/api/hmda/
+This is the documentation repository for the [System] dataset.
+Check out this API documentation at http://usg-website-templates.github.io/developer-hub/.
 
-It is a separate effort from [Qu](https://github.com/cfpb/qu), the software that powers this API.
-Qu's documentation lives at http://cfpb.github.io/qu/.
-
-Thanks to the [eRegs](https://github.com/cfpb/regulations-core) team and their documentation work for
-starting us off with a great codebase.
+Thanks to the CFPB [eRegs](https://github.com/cfpb/regulations-core) and [HMDA](https://github.com/cfpb/api) teams and their documentation work for starting us off with a great codebase.
 
 You can use [DOCter](https://github.com/cfpb/DOCter) to build documentation sites similar to this one.
 
