@@ -1,7 +1,7 @@
 Template Developer Hub 
 ====================
 
-*Note - This is an effort to make a vanilla version of [CFPB's outstanding API documentation](https://github.com/cfpb/api).  Though many of the references to the agency (and it's HMDA system) have been genericized, a number remain.  In particular, the `Basics`, `Console`, and `Queries` page have mostly been kept intact in order to show how those pages can work.  An agency re-using this would need to fully migrate that material to fit their API.*
+*Note - This is an effort to make a vanilla version of [CFPB's outstanding API documentation](https://github.com/cfpb/api).  Though many of the references to the agency (and it's HMDA system) have been genericized, a number remain.  In particular, the `Basics`, `Console`, and `Queries` page have mostly been kept intact in order to show how those pages can work.  An agency re-using this would need to fully migrate that material to fit their API.  One will also need to review the setup for the 'Fields` page in order to have it populate like it does on the [CFPB instance](http://cfpb.github.io/api/hmda/fields.html).*
 
 ----
 
