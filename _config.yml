@@ -1,5 +1,5 @@
 name: Developer Hub
-markdown: maruku
+markdown: kramdown
 pygments: true
 safe: true
 baseurl: /
