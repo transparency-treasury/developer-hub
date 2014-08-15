@@ -4,3 +4,5 @@ pygments: true
 safe: true
 baseurl: /
 exclude: ['.ruby-version', 'node_modules', 'package.json', 'bower.json']
+sass:
+  sass_dir: static/_sass

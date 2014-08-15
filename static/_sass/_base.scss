@@ -360,7 +360,7 @@ nav a:visited {
 
 nav li:hover {
     color: #75787b;
-    border-left: 4px solid #2CB34A;
+    border-left: 4px solid $nav-color;
     background-color: transparent;
     border-bottom: 1px solid #d0d0ce;
     padding-left: 0;
@@ -368,7 +368,7 @@ nav li:hover {
 
 nav li:active {
     color: #75787b;
-    border-left: 4px solid #2CB34A;
+    border-left: 4px solid $nav-color;
     background-color: transparent;
     border-bottom: 1px solid #d0d0ce;
     padding-left: 0;
@@ -391,7 +391,7 @@ nav li {
 #overview a.overview {
     color: #101820;
     border-bottom: none;
-    border-left: 4px solid #2CB34A;
+    border-left: 4px solid $nav-color;
     background-color: transparent;
     margin-left: -4px;
 }
@@ -399,7 +399,7 @@ nav li {
 #basics a.basics {
     color: #101820;
     border-bottom: none;
-    border-left: 4px solid #2CB34A;
+    border-left: 4px solid $nav-color;
     background-color: transparent;
     margin-left: -4px;
 }
@@ -407,7 +407,7 @@ nav li {
 #console a.console {
     color: #101820;
     border-bottom: none;
-    border-left: 4px solid #2CB34A;
+    border-left: 4px solid $nav-color;
     background-color: transparent;
     margin-left: -4px;
 }
@@ -415,7 +415,7 @@ nav li {
 #queries a.queries {
     color: #101820;
     border-bottom: none;
-    border-left: 4px solid #2CB34A;
+    border-left: 4px solid $nav-color;
     background-color: transparent;
     margin-left: -4px;
 }
@@ -423,7 +423,7 @@ nav li {
 #fields a.fields {
     color: #101820;
     border-bottom: none;
-    border-left: 4px solid #2CB34A;
+    border-left: 4px solid $nav-color;
     background-color: transparent;
     margin-left: -4px;
 }
@@ -431,7 +431,7 @@ nav li {
 #contribute a.contribute {
     color: #101820;
     border-bottom: none;
-    border-left: 4px solid #2CB34A;
+    border-left: 4px solid $nav-color;
     background-color: transparent;
     margin-left: -4px;
 }
@@ -497,7 +497,7 @@ ul.repo-list.no-padding {
 }
 
 .header {
-    border-bottom: 4px solid #2CB34A;
+    border-bottom: 4px solid $nav-color;
     width: 100%;
     background-color: #fff;
     /*position: fixed;*/
@@ -935,7 +935,7 @@ input[type="search"]::-webkit-search-decoration {
     -webkit-appearance: none;
 }
 
-button:: -moz-focus-inner, input::-moz-focus-inner {
+button::-moz-focus-inner, input::-moz-focus-inner {
     border:0;
     padding:0;
 }
@@ -1110,7 +1110,7 @@ del {
     thead {display: table-header-group; } /* Repeat header row at top of each printed page */
     tr, img {page-break-inside: avoid; }
     img {max-width: 100% !important; }
-    @page {margin: 0.5cm}
+    page {margin: 0.5cm}
     p, h2, h3 {orphans: 3; widows: 3}
     h2, h3{page-break-after: avoid}
 }
@@ -1167,6 +1167,7 @@ del {
 
 .open .expandable-button:before {
   content: "\f056";
+}
 
 /* custom class as .hidden is already used in the guide */
 .expandable-hidden {
