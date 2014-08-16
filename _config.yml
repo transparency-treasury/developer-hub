@@ -6,3 +6,13 @@ baseurl: /
 exclude: ['.ruby-version', 'node_modules', 'package.json', 'bower.json']
 sass:
   sass_dir: static/_sass
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      organization-name: "Agency"
+      organization-url: "http://agency.gov"
+      organization-email: user@agency.gov
+      source-code-policy.url: 
