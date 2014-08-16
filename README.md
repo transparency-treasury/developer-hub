@@ -25,4 +25,9 @@ After changing the JavaScript, run `grunt` to rebuild the minified JS.
 
 ## Project Page URL Structure
 In order to have the local resources work for both a github pages organizational and a project type site, pass a baseurl parameter at jekyll startup.
-``` bundle exec jekyll server --watch  --baseurl ''
+
+```
+bundle exec jekyll server --watch  --baseurl ''
+```
+
+[See this page for more information](http://jekyllrb.com/docs/github-pages/#project-page-url-structure)
