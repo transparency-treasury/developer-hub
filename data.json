@@ -1,0 +1,78 @@
+{
+	"basePath": "https://api.consumerfinance.gov:443",
+	"apiVersion": "1.0",
+	"swaggerVersion": "1.2",
+	"resourcePath": "/data",
+	"produces": 
+	[
+		"application/json",
+		"application/xml"
+	],
+
+	"models": 
+	{
+		
+	},
+
+	"apis": 
+	[
+		{
+			"path": "/data",
+			"operations": 
+			[
+				{
+					"method": "GET",
+					"produces": 
+					[
+						"application/json",
+						"application/xml"
+					],
+
+					"nickname": "getDatasets",
+					"summary": "Get a list of all datasets.",
+					"parameters": 
+					[
+						
+					]
+				}
+			]
+		},
+
+		{
+			"path": "/data/{dataset}",
+			"operations": 
+			[
+				{
+					"method": "GET",
+					"produces": 
+					[
+						"application/json",
+						"application/xml"
+					],
+
+					"nickname": "getDataset",
+					"summary": "Get metadata about a dataset.",
+					"parameters": 
+					[
+						{
+							"required": true,
+							"allowableValues": 
+							{
+								"valueType": "LIST",
+								"values": 
+								[
+									"hmda"
+								]
+							},
+
+							"paramType": "path",
+							"description": "Name of dataset",
+							"dataType": "string",
+							"name": "dataset"
+						}
+					]
+				}
+			]
+		}
+	]
+}
