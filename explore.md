@@ -13,7 +13,7 @@ The APIs available on transparency.treasury.gov include:
 *	[Revenue Collections Management (CIR)](#cir)
 *	[Data Registry](#data)
 
-##### [Treasury Report on Receivables](tror.md) <a id="tror"></a> 
+##### Treasury Report on Receivables
 
 The U.S. Department of the Treasury (Treasury) Report on Receivables and Debt Collection Activities (TROR) is the federal government’s primary means for collecting data on the status of non-tax receivables (delinquent and non-delinquent debt) owed to the United States. 
 
