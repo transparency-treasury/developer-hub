@@ -4,8 +4,8 @@ title: signup
 nav: signup
 ---
 
-*test
-*test1
+* test
+* test1
 
 ### API Key Registration
 
