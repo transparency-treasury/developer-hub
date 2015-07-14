@@ -6,7 +6,7 @@ nav: signup
 
 ### API Key Registration
 
-<a href="https://api.data.gov/signup" target="_blank">Register</a> for your own, unique application programming interface (API) key to access and use web services made available via transparency.treasury.gov. 
+[Register](https://api.data.gov/signup) for your own, unique application programming interface (API) key to access and use web services made available via transparency.treasury.gov. 
 
 Your API Key:
 +  Uniquely identifies you
