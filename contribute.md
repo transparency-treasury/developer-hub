@@ -3,9 +3,16 @@ layout: default
 title: Contribute
 nav: contribute
 ---
-### Open source contributing
+### Community
 
-The project is in the public domain, and we encourage you to [contribute to it on GitHub](http://github.com/[agency]/[repo]) by improving on it or making your own apps and tools using [Agency]'s data.
+The API’s made available on transparency.treasury.gov will expand over time to provide improved access to integrated financial management information.  Your input and feedback is important to us.   
+
+Follow us through GitHub (@transparency-treasury) to keep up to date on new APIs and updates as they become available.
+For questions, comments, or to report an issue, contact us. 
+
+
+
+The project is in the public domain, and we encourage you to [contribute to it on GitHub](http://github.com/[agency]/[developer-hub]) by improving on it or making your own apps and tools using [Agency]'s data.
 
 ##### Check out the repo
 
