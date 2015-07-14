@@ -17,8 +17,8 @@ The APIs made available on transparency.treasury.gov, originate from financial d
 We welcome you to explore the available API’s on transparency.treasury.gov. These APIs provide you with the ability to analyze financial data trends and patterns and gain insights about federal government:  debt management, collections, accounting and payment data. 
 
 Over time we will expand the API’s available through transparency.treasury.gov to provide improved access to integrated financial management information. Your participation is critical to the success of this effort, and we value your feedback.  We welcome you to share your applications and provide input at any time. 
-If you have any questions or concerns, or encounter technical issues, please contact a  member of the support team. 
-Click here to view our [terms and conditions](basics.html). 
+If you have any questions or concerns, or encounter technical issues, please [contact](contact.html) a  member of the support team. 
+Click here to view our [terms and conditions](terms.html). 
 
 
 <body id="overview"></body>
