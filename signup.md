@@ -11,7 +11,7 @@ nav: signup
 
 [Register](https://api.data.gov/signup) for your own, unique application programming interface (API) key to access and use web services made available via transparency.treasury.gov. 
 
-Your API Key:
+Your API Key
 * Uniquely identifies you
 * Should be kept private and should not be shared.
 * Give you access to API’s made available through transparency.treasury.gov
