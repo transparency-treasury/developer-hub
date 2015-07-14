@@ -1,4 +1,4 @@
-Template Developer Hub 
+Transparency.Treasury.Gov Developer Hub 
 ====================
 
 The U.S. Department of the Treasury (Treasury) is committed to creating openness and transparency in the federal government. This openness fosters accountability, allows for citizen participation, increases trust and confidence in the federal government, and ensures effective and efficient operations. 
