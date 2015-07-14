@@ -10,10 +10,6 @@ The API’s made available on transparency.treasury.gov will expand over time to
 Follow us through GitHub (@transparency-treasury) to keep up to date on new APIs and updates as they become available.
 For questions, comments, or to report an issue, contact us. 
 
-
-
-The project is in the public domain, and we encourage you to [contribute to it on GitHub](http://github.com/[agency]/[developer-hub]) by improving on it or making your own apps and tools using [Agency]'s data.
-
 ##### Check out the repo
 
 <ul class="repo-list no-padding">
@@ -23,8 +19,8 @@ The project is in the public domain, and we encourage you to [contribute to it o
     </p>
   </li>
   <li>
-    <a href="https://github.com/[agency]/[repo]">
-      <h4>[Repo]</h4>
+    <a href="https://github.com/transparency-treasury/developer-hub">
+      <h4>Transparency-Treasury</h4>
       <p>The open source software that runs the platform</p>
     </a>
   </li>
