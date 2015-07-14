@@ -8,10 +8,10 @@ nav: explore
 
 The APIs available on transparency.treasury.gov include: 
 
-*	[Treasury Report on Receivables (TROR)](*tror)
-*	[Treasury Offset Program (TOP)](*top)
-*	[Revenue Collections Management (CIR)](*cir)
-*	[Data Registry](*data)
+*	[Treasury Report on Receivables (TROR)](#tror)
+*	[Treasury Offset Program (TOP)](#top)
+*	[Revenue Collections Management (CIR)](#cir)
+*	[Data Registry](#data)
 
 ## [Treasury Report on Receivables](tror.md) <a id="tror"></a> 
 
