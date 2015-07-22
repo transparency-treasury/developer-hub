@@ -38,10 +38,14 @@ Returns the complete TROR data set in CSV, JSON or XML format.
   * `GET https://transparency.treasury.gov/fir/api/v1/download/tror`
 
 * Request Parameters
- * No Parameters
+
+| Parameter  | Required |  Default | Format | Description |
+| ------------- | -------------| ------------- | -------------| -------------|
+| apiKey | Yes | | string | Your developer API key. |
+
 
 * Output
-  * <a target='blank' href='https://transparency.treasury.gov/fir/api/v1/download/tror?apiKey=DEMOKEY&responseFormat=json'>Try it Out!</a>
+  * <a target='blank' href='https://transparency.treasury.gov/fir/api/v1/download/tror?apiKey=DEMOKEY'>Try it Out!</a>
 
 
 ###### TROR: Collections On Delinquent Debt
@@ -183,16 +187,90 @@ Provides access to Delinquent Debt by Age data.
 
 The U.S. Department of the Treasury (Treasury) Bureau of the Fiscal Service (Fiscal Service) helps maximize delinquent debt recovery efforts through the Treasury Offset Program (TOP). The Treasury performs this function on behalf of the states as authorized by the Debt Collection Improvement Act of 1996 and other legal authorities.
 
+###### Download TOP Data
+Returns the complete TOP data set in comma separated value (CSV) format.
+
+* Access Path
+  * `GET https://transparency.treasury.gov/fir/api/v1/download/top`
+
+* Request Parameters
+
+| Parameter  | Required |  Default | Format | Description |
+| ------------- | -------------| ------------- | -------------| -------------|
+| apiKey | Yes | | string | Your developer API key. |
+
+
+* Output
+  * <a target='blank' href='https://transparency.treasury.gov/fir/api/v1/download/top?apiKey=DEMOKEY'>Try it Out!</a>
+
 [Top](#page_top)
 
 ##### Revenue Collections Management (CIR) <a id="cir"></a>
 
 The Bureau of the Fiscal Service (Fiscal Service) administers the world’s largest government funds collections system through a network of more than 10,000 financial institutions. The bureau collects federal revenues, such as individual and corporate income tax deposits, customs duties, fees for government service, fines, and loan repayments.
 
+* Access Path
+  * `GET https://transparency.treasury.gov/fir/api/v1/cir/results`
+
+* Request Parameters
+
+| Parameter  | Required |  Default | Format | Description |
+| ------------- | -------------| ------------- | -------------| -------------|
+| apiKey | Yes | | string | Your developer API key. |
+| StartYear | No | First Available Year | YYYY | Starting fiscal year for the data to return (>=) in YYYY format. |
+| EtartYear | No | Most Recent Available Year | YYYY | Ending fiscal year for the data to return (>=) in YYYY format. |
+| responseFormat | No | json | string | Format to receive the result content.  Allowed values are json, xml and csv. |
+
+* Output
+  * <a target='blank' href='https://transparency.treasury.gov/fir/api/v1/cir/results?apiKey=DEMOKEY'>Try it Out!</a>  
+
 [Top](#page_top)
 
 ##### Data Registry <a id="data"></a>
 
 The purpose of the Fiscal Service Data Registry is to promote the common identification, use and sharing of data/information across the federal government. The registry contains information about definitions, authoritative sources, data types, formats and uses of common data. Responsibility for establishing and maintaining the Fiscal Service Data Registry and data-related standards falls under the Fiscal Service Enterprise Architecture Team.
+
+###### List Data Registry Elements
+Returns the complete list of Data Registry elements.
+
+* Access Path
+  * `GET https://transparency.treasury.gov/fir/api/v1/registry/list`
+
+* Request Parameters
+
+| Parameter  | Required |  Default | Format | Description |
+| ------------- | -------------| ------------- | -------------| -------------|
+| apiKey | Yes | | string | Your developer API key. |
+
+
+* Output
+  * <a target='blank' href='https://transparency.treasury.gov/fir/api/v1/registry/list?apiKey=DEMOKEY'>Try it Out!</a>
+
+###### Situational Metadata
+Get the situational metadata associated with a content element.
+
+* Access Path
+  * `GET https://transparency.treasury.gov/fir/api/v1/registry/situational`
+
+* Request Parameters
+
+| Parameter  | Required |  Default | Format | Description |
+| ------------- | -------------| ------------- | -------------| -------------|
+| apiKey | Yes | | string | Your developer API key. |
+| admin_id | Yes | | string | Administrative ID of the element to retrieve from the list data registry elements call.  Changes on data load. |
+
+###### Business Rule Metadata
+Get the business rules metadata associated with a content element.
+
+* Access Path
+  * `GET https://transparency.treasury.gov/fir/api/v1/registry/businessrule`
+
+* Request Parameters
+
+| Parameter  | Required |  Default | Format | Description |
+| ------------- | -------------| ------------- | -------------| -------------|
+| apiKey | Yes | | string | Your developer API key. |
+| admin_id | Yes | | string | Administrative ID of the element to retrieve from the list data registry elements call.  Changes on data load. |
+
 
 [Top](#page_top)
