@@ -35,16 +35,38 @@ The U.S. Department of the Treasury (Treasury) Report on Receivables and Debt Co
 Returns the complete TROR data set in CSV, JSON or XML format.
 
 * Access Path
-  * `GET https://transparency.treasury.gov/fir/api/v1/download/tror/download/tror`
+  * `GET https://transparency.treasury.gov/fir/api/v1/download/tror`
+
+* Request Parameters
+ * No Parameters
+
+* Output
+
+<a target='blank' href='https://transparency.treasury.gov/fir/api/v1/download/tror?apiKey=DEMOKEY&responseFormat=json'>Try it Out !</a>
+
+
+###### TROR: Collections On Delinquent Debt
+Provides access to the Collections on Delinquent Debt data.
+
+* Access Path
+  * `GET https://transparency.treasury.gov/fir/api/v1/tror/collectionsondelinquentdebt`
 
 * Request Parameters
 
-| Parameter  | Required | Value | Description |
-| ------------- | -------------| ------------- | -------------|
-| apiKey | Yes | string | Your developer API key. |
+| Parameter  | Required |  Default | Format | Description |
+| ------------- | -------------| ------------- | -------------| -------------|
+| apiKey | Yes | | string | Your developer API key. |
+| fiscalYear | No | All Years | YYYY | Selects data for a single fiscal year. |
+| Quarter | No | All Quarters | Q (1 - 4) | Selects data for a single fiscal quarter. |
+| receivableType | No | All Receivable Types | (1 - 4) | Selects type of receivable data to return.  Allowed values are: 1–All receivable types, 2–Administrative Receivables, 3–Direct Loans, 4–Defaulted Guaranteed Loans
+ |
 | responseFormat | No | string | Format to receive the result content.  Allowed values are json, xml and csv. |
 
-***[Try it out !](https://transparency.treasury.gov/fir/api/v1/download/tror/download/tror)***
+* Output
+
+<a target='blank' href='https://transparency.treasury.gov/fir/api/v1/tror/collectionsondelinquentdebt?apiKey=DEMOKEY'>Try it Out !</a>
+
+
 
 [Top](#top)
 
