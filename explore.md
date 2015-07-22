@@ -31,6 +31,21 @@ The APIs available on transparency.treasury.gov include:
 
 The U.S. Department of the Treasury (Treasury) Report on Receivables and Debt Collection Activities (TROR) is the federal government’s primary means for collecting data on the status of non-tax receivables (delinquent and non-delinquent debt) owed to the United States. 
 
+###### Download TROR Data
+Returns the complete TROR data set in CSV, JSON or XML format.
+
+* Access Path
+  * `GET https://transparency.treasury.gov/fir/api/v1/download/tror/download/tror`
+
+* Request Parameters
+
+| Parameter  | Required | Value | Description |
+| ------------- | -------------| ------------- | -------------|
+| apiKey | Yes | string | Your developer API key. |
+| responseFormat | No | string | Format to receive the result content.  Allowed values are json, xml and csv. |
+
+***[Try it out !](https://transparency.treasury.gov/fir/api/v1/download/tror/download/tror)***
+
 [Top](#top)
 
 ##### Treasury Offset Program (TOP) <a id="top"></a>
