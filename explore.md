@@ -41,8 +41,7 @@ Returns the complete TROR data set in CSV, JSON or XML format.
  * No Parameters
 
 * Output
-
-<a target='blank' href='https://transparency.treasury.gov/fir/api/v1/download/tror?apiKey=DEMOKEY&responseFormat=json'>Try it Out !</a>
+ * <a target='blank' href='https://transparency.treasury.gov/fir/api/v1/download/tror?apiKey=DEMOKEY&responseFormat=json'>Try it Out !</a>
 
 
 ###### TROR: Collections On Delinquent Debt
