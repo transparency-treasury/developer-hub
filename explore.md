@@ -58,9 +58,8 @@ Provides access to the Collections on Delinquent Debt data.
 | apiKey | Yes | | string | Your developer API key. |
 | fiscalYear | No | All Years | YYYY | Selects data for a single fiscal year. |
 | Quarter | No | All Quarters | Q (1 - 4) | Selects data for a single fiscal quarter. |
-| receivableType | No | All Receivable Types | (1 - 4) | Selects type of receivable data to return.  Allowed values are: 1–All receivable types, 2–Administrative Receivables, 3–Direct Loans, 4–Defaulted Guaranteed Loans
- |
-| responseFormat | No | string | Format to receive the result content.  Allowed values are json, xml and csv. |
+| receivableType | No | All Receivable Types | (1 - 4) | Selects type of receivable data to return.  Allowed values are: 1–All receivable types, 2–Administrative Receivables, 3–Direct Loans, 4–Defaulted Guaranteed Loans |
+| responseFormat | No | json | string | Format to receive the result content.  Allowed values are json, xml and csv. |
 
 * Output
 
