@@ -62,8 +62,7 @@ Provides access to the Collections on Delinquent Debt data.
 | responseFormat | No | json | string | Format to receive the result content.  Allowed values are json, xml and csv. |
 
 * Output
-
-<a target='blank' href='https://transparency.treasury.gov/fir/api/v1/tror/collectionsondelinquentdebt?apiKey=DEMOKEY'>Try it Out !</a>
+ * <a target='blank' href='https://transparency.treasury.gov/fir/api/v1/tror/collectionsondelinquentdebt?apiKey=DEMOKEY'>Try it Out !</a>
 
 
 
