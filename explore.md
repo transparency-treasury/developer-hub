@@ -62,25 +62,137 @@ Provides access to the Collections on Delinquent Debt data.
 
 * Output
   * <a target='blank' href='https://transparency.treasury.gov/fir/api/v1/tror/collectionsondelinquentdebt?apiKey=DEMOKEY'>Try it Out!</a>
+ 
+###### TROR: Outstanding Receivables
+Provides access to Outstanding Receivables data.
 
+* Access Path
+  * `GET https://transparency.treasury.gov/fir/api/v1/tror/outstandingreceivables`
 
+* Request Parameters
 
-[Top](#top)
+| Parameter  | Required |  Default | Format | Description |
+| ------------- | -------------| ------------- | -------------| -------------|
+| apiKey | Yes | | string | Your developer API key. |
+| fiscalYear | No | All Years | YYYY | Selects data for a single fiscal year. |
+| Quarter | No | All Quarters | Q (1 - 4) | Selects data for a single fiscal quarter. |
+| receivableType | No | All Receivable Types | (1 - 4) | Selects type of receivable data to return.  Allowed values are: 1–All receivable types, 2–Administrative Receivables, 3–Direct Loans, 4–Defaulted Guaranteed Loans |
+| responseFormat | No | json | string | Format to receive the result content.  Allowed values are json, xml and csv. |
+
+* Output
+  * <a target='blank' href='https://transparency.treasury.gov/fir/api/v1/tror/outstandingreceivables?apiKey=DEMOKEY'>Try it Out!</a> 
+
+###### TROR: New Receivables
+Provides access to New Receivables data.
+
+* Access Path
+  * `GET https://transparency.treasury.gov/fir/api/v1/tror/newreceivables`
+
+* Request Parameters
+
+| Parameter  | Required |  Default | Format | Description |
+| ------------- | -------------| ------------- | -------------| -------------|
+| apiKey | Yes | | string | Your developer API key. |
+| fiscalYear | No | All Years | YYYY | Selects data for a single fiscal year. |
+| Quarter | No | All Quarters | Q (1 - 4) | Selects data for a single fiscal quarter. |
+| receivableType | No | All Receivable Types | (1 - 4) | Selects type of receivable data to return.  Allowed values are: 1–All receivable types, 2–Administrative Receivables, 3–Direct Loans, 4–Defaulted Guaranteed Loans |
+| responseFormat | No | json | string | Format to receive the result content.  Allowed values are json, xml and csv. |
+
+* Output
+  * <a target='blank' href='https://transparency.treasury.gov/fir/api/v1/tror/newreceivables?apiKey=DEMOKEY'>Try it Out!</a>   
+
+###### TROR: Collections on Receivables
+Provides access to Collections on Receivables data.
+
+* Access Path
+  * `GET https://transparency.treasury.gov/fir/api/v1/tror/collectionsonreceivables`
+
+* Request Parameters
+
+| Parameter  | Required |  Default | Format | Description |
+| ------------- | -------------| ------------- | -------------| -------------|
+| apiKey | Yes | | string | Your developer API key. |
+| fiscalYear | No | All Years | YYYY | Selects data for a single fiscal year. |
+| Quarter | No | All Quarters | Q (1 - 4) | Selects data for a single fiscal quarter. |
+| receivableType | No | All Receivable Types | (1 - 4) | Selects type of receivable data to return.  Allowed values are: 1–All receivable types, 2–Administrative Receivables, 3–Direct Loans, 4–Defaulted Guaranteed Loans |
+| responseFormat | No | json | string | Format to receive the result content.  Allowed values are json, xml and csv. |
+
+* Output
+  * <a target='blank' href='https://transparency.treasury.gov/fir/api/v1/tror/collectionsonreceivables?apiKey=DEMOKEY'>Try it Out!</a> 
+ 
+###### TROR: Outstanding Delinquent Debt
+Provides access to Outstanding Delinquent Debt data.
+
+* Access Path
+  * `GET https://transparency.treasury.gov/fir/api/v1/tror/outstandingdelinquentdebt`
+
+* Request Parameters
+
+| Parameter  | Required |  Default | Format | Description |
+| ------------- | -------------| ------------- | -------------| -------------|
+| apiKey | Yes | | string | Your developer API key. |
+| fiscalYear | No | All Years | YYYY | Selects data for a single fiscal year. |
+| Quarter | No | All Quarters | Q (1 - 4) | Selects data for a single fiscal quarter. |
+| receivableType | No | All Receivable Types | (1 - 4) | Selects type of receivable data to return.  Allowed values are: 1–All receivable types, 2–Administrative Receivables, 3–Direct Loans, 4–Defaulted Guaranteed Loans |
+| responseFormat | No | json | string | Format to receive the result content.  Allowed values are json, xml and csv. |
+
+* Output
+  * <a target='blank' href='https://transparency.treasury.gov/fir/api/v1/tror/outstandingdelinquentdebt?apiKey=DEMOKEY'>Try it Out!</a>   
+ 
+###### TROR: Delinquent Debt By Year
+Provides access to Delinquent Debt Greater Than and Less Than One Year data.
+
+* Access Path
+  * `GET https://transparency.treasury.gov/fir/api/v1/tror/delinquentdebtyear`
+
+* Request Parameters
+
+| Parameter  | Required |  Default | Format | Description |
+| ------------- | -------------| ------------- | -------------| -------------|
+| apiKey | Yes | | string | Your developer API key. |
+| fiscalYear | No | All Years | YYYY | Selects data for a single fiscal year. |
+| Quarter | No | All Quarters | Q (1 - 4) | Selects data for a single fiscal quarter. |
+| receivableType | No | All Receivable Types | (1 - 4) | Selects type of receivable data to return.  Allowed values are: 1–All receivable types, 2–Administrative Receivables, 3–Direct Loans, 4–Defaulted Guaranteed Loans |
+| responseFormat | No | json | string | Format to receive the result content.  Allowed values are json, xml and csv. |
+
+* Output
+  * <a target='blank' href='https://transparency.treasury.gov/fir/api/v1/tror/delinquentdebtyear?apiKey=DEMOKEY'>Try it Out!</a>   
+ 
+###### TROR: Delinquent Debt By Age
+Provides access to Delinquent Debt by Age data.
+
+* Access Path
+  * `GET https://transparency.treasury.gov/fir/api/v1/tror/delinquentdebtbyage`
+
+* Request Parameters
+
+| Parameter  | Required |  Default | Format | Description |
+| ------------- | -------------| ------------- | -------------| -------------|
+| apiKey | Yes | | string | Your developer API key. |
+| fiscalYear | No | All Years | YYYY | Selects data for a single fiscal year. |
+| Quarter | No | All Quarters | Q (1 - 4) | Selects data for a single fiscal quarter. |
+| receivableType | No | All Receivable Types | (1 - 4) | Selects type of receivable data to return.  Allowed values are: 1–All receivable types, 2–Administrative Receivables, 3–Direct Loans, 4–Defaulted Guaranteed Loans |
+| responseFormat | No | json | string | Format to receive the result content.  Allowed values are json, xml and csv. |
+
+* Output
+  * <a target='blank' href='https://transparency.treasury.gov/fir/api/v1/tror/delinquentdebtbyage?apiKey=DEMOKEY'>Try it Out!</a>   
+
+[Top](#page_top)
 
 ##### Treasury Offset Program (TOP) <a id="top"></a>
 
 The U.S. Department of the Treasury (Treasury) Bureau of the Fiscal Service (Fiscal Service) helps maximize delinquent debt recovery efforts through the Treasury Offset Program (TOP). The Treasury performs this function on behalf of the states as authorized by the Debt Collection Improvement Act of 1996 and other legal authorities.
 
-[Top](#top)
+[Top](#page_top)
 
 ##### Revenue Collections Management (CIR) <a id="cir"></a>
 
 The Bureau of the Fiscal Service (Fiscal Service) administers the world’s largest government funds collections system through a network of more than 10,000 financial institutions. The bureau collects federal revenues, such as individual and corporate income tax deposits, customs duties, fees for government service, fines, and loan repayments.
 
-[Top](#top)
+[Top](#page_top)
 
 ##### Data Registry <a id="data"></a>
 
 The purpose of the Fiscal Service Data Registry is to promote the common identification, use and sharing of data/information across the federal government. The registry contains information about definitions, authoritative sources, data types, formats and uses of common data. Responsibility for establishing and maintaining the Fiscal Service Data Registry and data-related standards falls under the Fiscal Service Enterprise Architecture Team.
 
-[Top](#top)
+[Top](#page_top)
