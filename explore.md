@@ -4,7 +4,21 @@ title: explore
 nav: explore
 ---
 
-### Explore
+### API Documentation
+
+Each of the areas underneath this section will be organized around a specific dataset access.
+
+The API’s made available on transparency.treasury.gov will expand over time to provide improved access to integrated financial management information.  Your input and feedback is important to us.   
+
+## Access & Path
+
+Each API below can be accessed through a base path, which should be prepended onto each call.  The base access path for the FIR APIs is:
+
+  https://transparency.treasury.gov/fir/api/v1
+
+The individual requests are appended to the path, as in:
+
+  https://transparency.treasury.gov/fir/api/v1/download/tror/...  
 
 The APIs available on transparency.treasury.gov include: 
 
