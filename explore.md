@@ -6,21 +6,19 @@ nav: explore
 
 ### API Documentation  <a id="page_top"></a>
 
-Each of the areas underneath this section will be organized around a specific dataset access.
-
-The API’s made available on transparency.treasury.gov will expand over time to provide improved access to integrated financial management information.  Your input and feedback is important to us.   
 
 ##### Access & Path
 
-Each API below can be accessed through a base path, which should be prepended onto each call.  The base access path for the FIR APIs is:
 
-`https://transparency.treasury.gov/fir/api/v1`
+Each API below can be accessed through a base path, which should be added to the beginning of each call. The base access path for the FIR APIs is:
 
-The individual requests are appended to the path, as in:
+[https://transparency.treasury.gov/fir/api/v1/](https://transparency.treasury.gov/fir/api/v1/)
 
-`https://transparency.treasury.gov/fir/api/v1/download/tror/...`  
+The Individual requests are appended to the path, as in:
 
-The APIs available on transparency.treasury.gov include: 
+[https://transparency.treasury.gov/fir/api/v1/download/tror/](https://transparency.treasury.gov/fir/api/v1/download/tror/)  
+
+The APIs available on transparency.treasury.gov include:
 
 *	[Treasury Report on Receivables (TROR)](#tror)
 *	[Treasury Offset Program (TOP)](#top)
@@ -29,7 +27,7 @@ The APIs available on transparency.treasury.gov include:
 
 ##### Treasury Report on Receivables <a id="tror"></a>
 
-The U.S. Department of the Treasury (Treasury) Report on Receivables and Debt Collection Activities (TROR) is the federal government’s primary means for collecting data on the status of non-tax receivables (delinquent and non-delinquent debt) owed to the United States. 
+The Treasury's Report on Receivables and Debt Collection Activities (TROR) is the federal government’s primary means for collecting data on the status of non-tax receivables (delinquent and non-delinquent debt) owed to the United States.
 
 ###### Download TROR Data
 Returns the complete TROR data set in CSV, JSON or XML format.
@@ -39,16 +37,77 @@ Returns the complete TROR data set in CSV, JSON or XML format.
 
 * Request Parameters
 
-| Parameter  | Required |  Default | Format | Description |
-| ------------- | -------------| ------------- | -------------| -------------|
-| apiKey | Yes | | string | Your developer API key. |
+| Parameter | Format | Description |
+| ------------- | -------------| -------------|
+| apiKey | string | Your developer API key. |
+| responseFormat | string | Format to receive the result content. Allowed values are json, xml and csv. |
 
+* Constraints
+  * There are no business rul constraints for this service.
 
 * Output
   * <a target='blank' href='https://transparency.treasury.gov/fir/api/v1/download/tror?apiKey=DEMOKEY'>Try it Out!</a>
+  * Output from this function is a JSON, XML or CSV file with the following example CSV data:
+
+* Examples
+  * The following example would return the complete dataset in CSV format:
+  * `../download/tror?apiKey=DEMO_KEY&responseFormat=csv`
+
+###### Query TROR Data
+returns selected TROR data.
+
+* Access Path
+  * Provides access to the Collections on Delinquent Debt data:
+    `../tror/collectionsondelinquentdebt`
+  * Provides access to Outstanding Receivables Data:
+    `../tror/Outstandingreceivables`
+  * Provides access to New Receivables data:
+    `../tror/newreceivables`
+  * Provides access to Collections on Receivables data:
+    `../tror/collectionsonreceivables`
+  * Provides access to Outstanding Delinquent Debt data:
+    `../tror/outstandingdelinquentdebt`
+  * Provides access to Delinquent Debt Greater Than and Less Than One Year data:
+    `../tror/delinquentdebtyear`
+  * Provides access to Delinquent Debt by Age data:
+    `../tror/delinquentdebtbyage`
+
+* Request Parameters
+
+| Parameter | Format | Description |
+| ------------- | -------------| -------------|
+| apiKey | string | Your developer API key. |
+| fiscalYear | integer | selects data for a single fiscal year. Optional, default value is all years, if parameter not provided.|
+|Quarter| integer| Selects data for a single fiscal quarter. Allowed values are 1, 2, 3 and 4. Optional, default value is all quarters, if parameter not provided.|
+|receivableType| integer| Selects type of receivable data to return. Allowed values are: |
+|  | |1 - All receivable types (above, no value = all)|
+|  | |2 - Administrative Receivables|
+|  | |3 - Direct Loans|
+|  | |4 - Defaulted Guaranteed Loans|
+|  | |Optional, default value is 1- all receivable types.|
+| responseFormat | string | Format to receive the result content. Allowed values are json, xml and csv. |
+
+* Constraints
+  * There are no business rule constraints for this service.
+
+* Outputs
+  * Output from this function is a JSON, XML or CSV file. No example output available.
+
+* Examples
+  * The following example would return the complete Collections on Delinquent Debt data in XML format:
+    `../outstandingreceivables?apiKey=DEMO_KEY&`
 
 
-###### TROR: Collections On Delinquent Debt
+
+
+
+
+
+
+
+
+
+<!-- ###### TROR: Collections On Delinquent Debt
 Provides access to the Collections on Delinquent Debt data.
 
 * Access Path
@@ -66,7 +125,7 @@ Provides access to the Collections on Delinquent Debt data.
 
 * Output
   * <a target='blank' href='https://transparency.treasury.gov/fir/api/v1/tror/collectionsondelinquentdebt?apiKey=DEMOKEY'>Try it Out!</a>
- 
+
 ###### TROR: Outstanding Receivables
 Provides access to Outstanding Receivables data.
 
@@ -84,7 +143,7 @@ Provides access to Outstanding Receivables data.
 | responseFormat | No | json | string | Format to receive the result content.  Allowed values are json, xml and csv. |
 
 * Output
-  * <a target='blank' href='https://transparency.treasury.gov/fir/api/v1/tror/outstandingreceivables?apiKey=DEMOKEY'>Try it Out!</a> 
+  * <a target='blank' href='https://transparency.treasury.gov/fir/api/v1/tror/outstandingreceivables?apiKey=DEMOKEY'>Try it Out!</a>
 
 ###### TROR: New Receivables
 Provides access to New Receivables data.
@@ -122,8 +181,8 @@ Provides access to Collections on Receivables data.
 | responseFormat | No | json | string | Format to receive the result content.  Allowed values are json, xml and csv. |
 
 * Output
-  * <a target='blank' href='https://transparency.treasury.gov/fir/api/v1/tror/collectionsonreceivables?apiKey=DEMOKEY'>Try it Out!</a> 
- 
+  * <a target='blank' href='https://transparency.treasury.gov/fir/api/v1/tror/collectionsonreceivables?apiKey=DEMOKEY'>Try it Out!</a>
+
 ###### TROR: Outstanding Delinquent Debt
 Provides access to Outstanding Delinquent Debt data.
 
@@ -142,7 +201,7 @@ Provides access to Outstanding Delinquent Debt data.
 
 * Output
   * <a target='blank' href='https://transparency.treasury.gov/fir/api/v1/tror/outstandingdelinquentdebt?apiKey=DEMOKEY'>Try it Out!</a>   
- 
+
 ###### TROR: Delinquent Debt By Year
 Provides access to Delinquent Debt Greater Than and Less Than One Year data.
 
@@ -161,7 +220,7 @@ Provides access to Delinquent Debt Greater Than and Less Than One Year data.
 
 * Output
   * <a target='blank' href='https://transparency.treasury.gov/fir/api/v1/tror/delinquentdebtyear?apiKey=DEMOKEY'>Try it Out!</a>   
- 
+
 ###### TROR: Delinquent Debt By Age
 Provides access to Delinquent Debt by Age data.
 
@@ -179,7 +238,7 @@ Provides access to Delinquent Debt by Age data.
 | responseFormat | No | json | string | Format to receive the result content.  Allowed values are json, xml and csv. |
 
 * Output
-  * <a target='blank' href='https://transparency.treasury.gov/fir/api/v1/tror/delinquentdebtbyage?apiKey=DEMOKEY'>Try it Out!</a>   
+  * <a target='blank' href='https://transparency.treasury.gov/fir/api/v1/tror/delinquentdebtbyage?apiKey=DEMOKEY'>Try it Out!</a>    -->
 
 [Top](#page_top)
 
