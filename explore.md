@@ -238,7 +238,7 @@ Provides access to Delinquent Debt by Age data.
 
 ##### Treasury Offset Program (TOP) <a id="top"></a>
 
-The U.S. Department of the Treasury (Treasury) Bureau of the Fiscal Service (Fiscal Service) helps maximize delinquent debt recovery efforts through the Treasury Offset Program (TOP). The Treasury performs this function on behalf of the states as authorized by the Debt Collection Improvement Act of 1996 and other legal authorities.
+The Fiscal Service helps maximize delinquent debt recovery efforts on behalf of the states and federal agencies through the Treasury Offset Program (TOP).
 
 ###### Download TOP Data
 Returns the complete TOP data set in comma separated value (CSV) format.
