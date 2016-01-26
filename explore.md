@@ -4,19 +4,16 @@ title: explore
 nav: explore
 ---
 
-### API Documentation  <a id="page_top"></a>
-
-
-##### Access & Path
+## Access & Path   <a id="page_top"></a>
 
 
 Each API below can be accessed through a base path, which should be added to the beginning of each call. The base access path for the FIR APIs is:
 
-[https://transparency.treasury.gov/fir/api/v1/](https://transparency.treasury.gov/fir/api/v1/)
+[https://api.transparency.treasury.gov/services/api/v1/](https://api.transparency.treasury.gov/services/api/v1/)
 
 The Individual requests are appended to the path, as in:
 
-[https://transparency.treasury.gov/fir/api/v1/download/tror/](https://transparency.treasury.gov/fir/api/v1/download/tror/)  
+[https://api.transparency.treasury.gov/services/api/v1/download/tror/](https://api.transparency.treasury.gov/services/api/v1/download/tror/)  
 
 The APIs available on transparency.treasury.gov include:
 
@@ -33,7 +30,7 @@ The Treasury's Report on Receivables and Debt Collection Activities (TROR) is th
 Returns the complete TROR data set in CSV, JSON or XML format.
 
 * Access Path
-  * `GET https://transparency.treasury.gov/fir/api/v1/download/tror`
+  * `GET https://api.transparency.treasury.gov/services/api/v1/download/tror`
 
 * Request Parameters
 
@@ -46,7 +43,7 @@ Returns the complete TROR data set in CSV, JSON or XML format.
   * There are no business rul constraints for this service.
 
 * Output
-  * <a target='blank' href='https://transparency.treasury.gov/fir/api/v1/download/tror?apiKey=DEMOKEY'>Try it Out!</a>
+  * <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1/download/tror?apiKey=DEMOKEY'>Try it Out!</a>
   * Output from this function is a JSON, XML or CSV file with the following example CSV data:
 
 * Examples
@@ -95,23 +92,20 @@ returns selected TROR data.
 
 * Examples
   * The following example would return the complete Collections on Delinquent Debt data in XML format:
-    `../outstandingreceivables?apiKey=DEMO_KEY&`
+    `../collectionsondelinquentdebt?apiKey=DEMO_KEY&responseFormat=xml`
 
+  * The following example would return the Outstanding Receivables data for all quarters of fiscal year 2012 in JSON format:
+    `../outstandingreceivables?apiKey=DEMO_KEY&fiscalYear=2012&responseFormat=json`
 
-
-
-
-
-
-
-
+    * The following example would return the complete Delinquent Debt by Age dataset for fiscal quarter 3 for all years in CSV format:
+      `../delinquentdebtbyage?apiKey=DEMO_KEY&fiscalQuarter=3&responseFormat=csv`
 
 
 <!-- ###### TROR: Collections On Delinquent Debt
 Provides access to the Collections on Delinquent Debt data.
 
 * Access Path
-  * `GET https://transparency.treasury.gov/fir/api/v1/tror/collectionsondelinquentdebt`
+  * `GET https://api.transparency.treasury.gov/services/api/v1/tror/collectionsondelinquentdebt`
 
 * Request Parameters
 
@@ -124,13 +118,13 @@ Provides access to the Collections on Delinquent Debt data.
 | responseFormat | No | json | string | Format to receive the result content.  Allowed values are json, xml and csv. |
 
 * Output
-  * <a target='blank' href='https://transparency.treasury.gov/fir/api/v1/tror/collectionsondelinquentdebt?apiKey=DEMOKEY'>Try it Out!</a>
+  * <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1/tror/collectionsondelinquentdebt?apiKey=DEMOKEY'>Try it Out!</a>
 
 ###### TROR: Outstanding Receivables
 Provides access to Outstanding Receivables data.
 
 * Access Path
-  * `GET https://transparency.treasury.gov/fir/api/v1/tror/outstandingreceivables`
+  * `GET https://api.transparency.treasury.gov/services/api/v1/tror/outstandingreceivables`
 
 * Request Parameters
 
@@ -143,13 +137,13 @@ Provides access to Outstanding Receivables data.
 | responseFormat | No | json | string | Format to receive the result content.  Allowed values are json, xml and csv. |
 
 * Output
-  * <a target='blank' href='https://transparency.treasury.gov/fir/api/v1/tror/outstandingreceivables?apiKey=DEMOKEY'>Try it Out!</a>
+  * <a target='blank' href='https://api.transparency.treasury.gov/fir/services/v1/tror/outstandingreceivables?apiKey=DEMOKEY'>Try it Out!</a>
 
 ###### TROR: New Receivables
 Provides access to New Receivables data.
 
 * Access Path
-  * `GET https://transparency.treasury.gov/fir/api/v1/tror/newreceivables`
+  * `GET https://api.transparency.treasury.gov/firservices/v1/tror/newreceivables`
 
 * Request Parameters
 
@@ -162,13 +156,13 @@ Provides access to New Receivables data.
 | responseFormat | No | json | string | Format to receive the result content.  Allowed values are json, xml and csv. |
 
 * Output
-  * <a target='blank' href='https://transparency.treasury.gov/fir/api/v1/tror/newreceivables?apiKey=DEMOKEY'>Try it Out!</a>   
+  * <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1/tror/newreceivables?apiKey=DEMOKEY'>Try it Out!</a>   
 
 ###### TROR: Collections on Receivables
 Provides access to Collections on Receivables data.
 
 * Access Path
-  * `GET https://transparency.treasury.gov/fir/api/v1/tror/collectionsonreceivables`
+  * `GET https://api.transparency.treasury.gov/services/api/v1/tror/collectionsonreceivables`
 
 * Request Parameters
 
@@ -181,13 +175,13 @@ Provides access to Collections on Receivables data.
 | responseFormat | No | json | string | Format to receive the result content.  Allowed values are json, xml and csv. |
 
 * Output
-  * <a target='blank' href='https://transparency.treasury.gov/fir/api/v1/tror/collectionsonreceivables?apiKey=DEMOKEY'>Try it Out!</a>
+  * <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1/tror/collectionsonreceivables?apiKey=DEMOKEY'>Try it Out!</a>
 
 ###### TROR: Outstanding Delinquent Debt
 Provides access to Outstanding Delinquent Debt data.
 
 * Access Path
-  * `GET https://transparency.treasury.gov/fir/api/v1/tror/outstandingdelinquentdebt`
+  * `GET https://api.transparency.treasury.gov/services/api/v1/tror/outstandingdelinquentdebt`
 
 * Request Parameters
 
@@ -200,13 +194,13 @@ Provides access to Outstanding Delinquent Debt data.
 | responseFormat | No | json | string | Format to receive the result content.  Allowed values are json, xml and csv. |
 
 * Output
-  * <a target='blank' href='https://transparency.treasury.gov/fir/api/v1/tror/outstandingdelinquentdebt?apiKey=DEMOKEY'>Try it Out!</a>   
+  * <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1/tror/outstandingdelinquentdebt?apiKey=DEMOKEY'>Try it Out!</a>   
 
 ###### TROR: Delinquent Debt By Year
 Provides access to Delinquent Debt Greater Than and Less Than One Year data.
 
 * Access Path
-  * `GET https://transparency.treasury.gov/fir/api/v1/tror/delinquentdebtyear`
+  * `GET https://api.transparency.treasury.gov/services/api/v1/tror/delinquentdebtyear`
 
 * Request Parameters
 
@@ -219,13 +213,13 @@ Provides access to Delinquent Debt Greater Than and Less Than One Year data.
 | responseFormat | No | json | string | Format to receive the result content.  Allowed values are json, xml and csv. |
 
 * Output
-  * <a target='blank' href='https://transparency.treasury.gov/fir/api/v1/tror/delinquentdebtyear?apiKey=DEMOKEY'>Try it Out!</a>   
+  * <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1/tror/delinquentdebtyear?apiKey=DEMOKEY'>Try it Out!</a>   
 
 ###### TROR: Delinquent Debt By Age
 Provides access to Delinquent Debt by Age data.
 
 * Access Path
-  * `GET https://transparency.treasury.gov/fir/api/v1/tror/delinquentdebtbyage`
+  * `GET https://api.transparency.treasury.gov/services/api/v1/tror/delinquentdebtbyage`
 
 * Request Parameters
 
@@ -238,7 +232,7 @@ Provides access to Delinquent Debt by Age data.
 | responseFormat | No | json | string | Format to receive the result content.  Allowed values are json, xml and csv. |
 
 * Output
-  * <a target='blank' href='https://transparency.treasury.gov/fir/api/v1/tror/delinquentdebtbyage?apiKey=DEMOKEY'>Try it Out!</a>    -->
+  * <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1/tror/delinquentdebtbyage?apiKey=DEMOKEY'>Try it Out!</a>    -->
 
 [Top](#page_top)
 
@@ -250,7 +244,7 @@ The U.S. Department of the Treasury (Treasury) Bureau of the Fiscal Service (Fis
 Returns the complete TOP data set in comma separated value (CSV) format.
 
 * Access Path
-  * `GET https://transparency.treasury.gov/fir/api/v1/download/top`
+  * `GET https://api.transparency.treasury.gov/services/api/v1/download/top`
 
 * Request Parameters
 
@@ -258,18 +252,32 @@ Returns the complete TOP data set in comma separated value (CSV) format.
 | ------------- | -------------| ------------- | -------------| -------------|
 | apiKey | Yes | | string | Your developer API key. |
 
+* Constraints
+
+There are no business rule contraints for this service.
 
 * Output
-  * <a target='blank' href='https://transparency.treasury.gov/fir/api/v1/download/top?apiKey=DEMOKEY'>Try it Out!</a>
+  * <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1/download/top?apiKey=DEMOKEY'>Try it Out!</a>
+
+* Examples
+
+  * The following example would return the complete dataset:
+  '../download/top/apiKey=DEMO_KEY&responseFormat=csv'
+
+
 
 [Top](#page_top)
 
 ##### Revenue Collections Management (CIR) <a id="cir"></a>
 
-The Bureau of the Fiscal Service (Fiscal Service) administers the world’s largest government funds collections system through a network of more than 10,000 financial institutions. The bureau collects federal revenues, such as individual and corporate income tax deposits, customs duties, fees for government service, fines, and loan repayments.
+The Fiscal Service administers the world’s largest government funds collections system through a network of more than 10,000 financial institutions. The bureau collects federal revenues, such as individual and corporate income tax deposits, customs duties, fees for government service, fines, and loan repayments.
+
+Query the CIR data
+
+Returns the Revenue Collections Management CIR data in available formats.
 
 * Access Path
-  * `GET https://transparency.treasury.gov/fir/api/v1/cir/results`
+  * `GET https://api.transparency.treasury.gov/services/api/v1/cir/results`
 
 * Request Parameters
 
@@ -280,8 +288,26 @@ The Bureau of the Fiscal Service (Fiscal Service) administers the world’s larg
 | EtartYear | No | Most Recent Available Year | YYYY | Ending fiscal year for the data to return (>=) in YYYY format. |
 | responseFormat | No | json | string | Format to receive the result content.  Allowed values are json, xml and csv. |
 
+* Constraints
+
+The following constraints are applied to API requests.
+
+    EndYear must be greater than or equal to StartYear or the return result will be empty.
+
 * Output
-  * <a target='blank' href='https://transparency.treasury.gov/fir/api/v1/cir/results?apiKey=DEMOKEY'>Try it Out!</a>  
+
+    Output from this function is a JSON or XML file. Example JSON output:
+
+  * <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1/cir/results?apiKey=DEMOKEY'>Try it Out!</a>  
+
+* Examples
+
+* The following example would return the complete dataset in json format:
+  `..cir/results?apiKey=DEMO_KEY&responseFormat=json`
+
+  * The following example would return data for the years 2007 through 2011 inclusive, in xml format:
+    `..cir/results?apiKey=DEMO_KEY&StartYear=2007&EndYear=2001&responseFormat=json`
+
 
 [Top](#page_top)
 
@@ -293,7 +319,7 @@ The purpose of the Fiscal Service Data Registry is to promote the common identif
 Returns the complete list of Data Registry elements.
 
 * Access Path
-  * `GET https://transparency.treasury.gov/fir/api/v1/registry/list`
+  * `GET https://api.transparency.treasury.gov/fir/api/v1/registry/list`
 
 * Request Parameters
 
@@ -301,15 +327,24 @@ Returns the complete list of Data Registry elements.
 | ------------- | -------------| ------------- | -------------| -------------|
 | apiKey | Yes | | string | Your developer API key. |
 
+* Constraints
+
+There are no business rule constraints for this service.
 
 * Output
-  * <a target='blank' href='https://transparency.treasury.gov/fir/api/v1/registry/list?apiKey=DEMOKEY'>Try it Out!</a>
+  * <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1/registry/list?apiKey=DEMOKEY'>Try it Out!</a>
 
-###### Situational Metadata
+* Examples
+
+* The following example would return the single instance details:
+  `../registry/list`
+
+
+###### Situational
 Get the situational metadata associated with a content element.
 
 * Access Path
-  * `GET https://transparency.treasury.gov/fir/api/v1/registry/situational`
+  * `GET https://api.transparency.treasury.gov/services/api/v1/registry/situational`
 
 * Request Parameters
 
@@ -318,11 +353,23 @@ Get the situational metadata associated with a content element.
 | apiKey | Yes | | string | Your developer API key. |
 | admin_id | Yes | | string | Administrative ID of the element to retrieve from the list data registry elements call.  Changes on data load. |
 
-###### Business Rule Metadata
+* Constraints
+
+There are no business rule contraints for this service.
+
+* Outputs
+
+
+* Examples
+
+* The following example would return the single instance details:
+  `../registry/situational?apiKey=DEMO_KEY&admin_id=ABC123`
+
+###### Business Rule
 Get the business rules metadata associated with a content element.
 
 * Access Path
-  * `GET https://transparency.treasury.gov/fir/api/v1/registry/businessrule`
+  * `GET https://api.transparency.treasury.gov/services/api/v1/registry/businessrule`
 
 * Request Parameters
 
@@ -331,5 +378,16 @@ Get the business rules metadata associated with a content element.
 | apiKey | Yes | | string | Your developer API key. |
 | admin_id | Yes | | string | Administrative ID of the element to retrieve from the list data registry elements call.  Changes on data load. |
 
+* Constraints
+
+There are no business rule constraints for this service.
+
+* Outputs
+
+
+* Examples
+
+* The following example would return the single instance details:
+  `../registry/businessrule?apiKey=DEMO_KEY&admin_id=ABC123`
 
 [Top](#page_top)
