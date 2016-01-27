@@ -97,8 +97,8 @@ returns selected TROR data.
   * The following example would return the Outstanding Receivables data for all quarters of fiscal year 2012 in JSON format:
     `../outstandingreceivables?apiKey=DEMO_KEY&fiscalYear=2012&responseFormat=json`
 
-    * The following example would return the complete Delinquent Debt by Age dataset for fiscal quarter 3 for all years in CSV format:
-      `../delinquentdebtbyage?apiKey=DEMO_KEY&fiscalQuarter=3&responseFormat=csv`
+  * The following example would return the complete Delinquent Debt by Age dataset for fiscal quarter 3 for all years in CSV format:
+    `../delinquentdebtbyage?apiKey=DEMO_KEY&fiscalQuarter=3&responseFormat=csv`
 
 
 <!-- ###### TROR: Collections On Delinquent Debt
