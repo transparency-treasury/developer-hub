@@ -319,7 +319,7 @@ The purpose of the Fiscal Service Data Registry is to promote the common identif
 Returns the complete list of Data Registry elements.
 
 * Access Path
-  * `GET https://api.transparency.treasury.gov/fir/api/v1/registry/list`
+  * `GET https://api.transparency.treasury.gov/services/api/v1/registry/list`
 
 * Request Parameters
 
@@ -389,5 +389,67 @@ There are no business rule constraints for this service.
 
 * The following example would return the single instance details:
   `../registry/businessrule?apiKey=DEMO_KEY&admin_id=ABC123`
+
+[Top](#page_top)
+
+##### Debt to the Penny<a id="data"></a>
+
+Debt to the Penny us the total public debt to the public reported daily. Public debt is made up as public debt securities issued by the U.S. Treasury. U.S. Treasury securities primarily consist of marketable Treasury securities (bills, notes and bonds), savings bonds and special securities issued to state and local governments.
+
+###### List Debt to the Penny
+Returns the complete list of Debt to the Penny elements.
+
+* Access Path
+  * `GET https://api.transparency.treasury.gov/services/api/v1/od/debt_to_penny/list`
+
+* Request Parameters
+
+| Parameter  | Required |  Default | Format | Description |
+| ------------- | -------------| ------------- | -------------| -------------|
+| apiKey | Yes | | string | Your developer API key. |
+
+* Constraints
+
+There are no business rule constraints for this service.
+
+* Output
+  * <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1/do/debt_to_penny/list?apiKey=DEMOKEY'>Try it Out!</a>
+
+* Examples
+
+* The following example would return the single instance details:
+  `../do/debt_to_penny/list`
+
+
+[Top](#page_top)
+
+##### Status Report of U.S. Government Reserve<a id="gold"></a>
+
+The Status Report of U.S. Government Gold Reserve (Gold Report): Reflects gold bullion and gold coins owned by the federal government. The report summarizes the fine troy ounces and the book value of gold held by various facilities as well as identifies the value of gold coins and bullion on display at Federal Reserve banks; coins and bullion in reserve at the Federal Reserve Bank of New York and gold held by U.S. Mint facilities.
+
+###### Status Report of U.S. Government Gold Reserve
+Returns the complete list of Status Report of U.S. Government Gold Reserve elements.
+
+* Access Path
+  * `GET https://api.transparency.treasury.gov/fir/api/v1//list`
+
+* Request Parameters
+
+| Parameter  | Required |  Default | Format | Description |
+| ------------- | -------------| ------------- | -------------| -------------|
+| apiKey | Yes | | string | Your developer API key. |
+
+* Constraints
+
+There are no business rule constraints for this service.
+
+* Output
+  * <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1//list?apiKey=DEMOKEY'>Try it Out!</a>
+
+* Examples
+
+* The following example would return the single instance details:
+  `..//list`
+
 
 [Top](#page_top)
