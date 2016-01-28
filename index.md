@@ -24,7 +24,7 @@ We welcome you to explore the available API’s on transparency.treasury.gov. Th
 
 Over time we will expand the API’s available through transparency.treasury.gov to provide improved access to integrated financial management information. Your participation is critical to the success of this effort, and we value your feedback.  We welcome you to share your applications and provide input at any time.
 
-If you have any questions or concerns, or encounter technical issues, please [contact](contact.html) a member of the support team.
+If you have any questions or concerns, or encounter technical issues, please [contact](contact.html) a member of the support team. 
 
 Your use and access to the API's are governed by the applicable [Terms of Service](terms.html) Agreement.
 
