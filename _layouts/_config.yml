@@ -15,4 +15,4 @@ defaults:
       organization-name: "Transparency.Treasury.Gov"
       organization-url: "http://transparency.treasury.gov"
       organization-email: user@agency.gov
-      source-code-policy.url:
+      source-code-policy.url: 
