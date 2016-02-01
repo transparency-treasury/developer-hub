@@ -14,3 +14,5 @@ Your API Key:
 * Give you access to API’s made available through transparency.treasury.gov
 
 To use your key, simply pass the key as a URL query parameter when making Web service requests. For example:
+
+...?apiKey=DEMOKEY

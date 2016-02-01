@@ -500,7 +500,7 @@ ul.repo-list.no-padding {
     border-bottom: 4px solid $nav-color;
     width: 100%;
     // background-color: #fff;
-    background-color: #0E3253
+    background-color: #0E3253;
     /*position: fixed;*/
     top: 0;
     z-index: 99999;
@@ -512,8 +512,8 @@ ul.repo-list.no-padding {
     font-size: 1em;
     line-height: 1.75em;
     margin: 1em;
-    margin-left: .75em;
-    float: left;
+    // margin-left: .75em;
+    // float: left;
 }
 
 .header h1 span {
@@ -648,9 +648,6 @@ footer a:hover {
     .header .logo {
         float: right;
         margin: 1.25em 1em;
-    }
-    .header h1 {
-        float: left;
     }
 
     .wrap {

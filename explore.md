@@ -413,7 +413,7 @@ Returns the complete list of Debt to the Penny elements.
 There are no business rule constraints for this service.
 
 * Output
-  * <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1/do/debt_to_penny/list?apiKey=DEMOKEY'>Try it Out!</a>
+  * <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1/od/debt_to_penny/list?apiKey=DEMOKEY'>Try it Out!</a>
 
 * Examples
 
@@ -431,7 +431,7 @@ The Status Report of U.S. Government Gold Reserve (Gold Report): Reflects gold b
 Returns the complete list of Status Report of U.S. Government Gold Reserve elements.
 
 * Access Path
-  * `GET https://api.transparency.treasury.gov/fir/api/v1//list`
+  * `GET https://api.transparency.treasury.gov/services/api/v1//list`
 
 * Request Parameters
 
@@ -444,12 +444,12 @@ Returns the complete list of Status Report of U.S. Government Gold Reserve eleme
 There are no business rule constraints for this service.
 
 * Output
-  * <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1//list?apiKey=DEMOKEY'>Try it Out!</a>
+  * <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1/od/gold_reserve/list?apiKey=DEMOKEY'>Try it Out!</a>
 
 * Examples
 
 * The following example would return the single instance details:
-  `..//list`
+  `../od/gold_reserve/list`
 
 
 [Top](#page_top)
