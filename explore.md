@@ -247,7 +247,7 @@ Constraints
 
 * There are no business rule contraints for this service.
 
-Outputs
+Output
 
 * The following output uses a sample admin_id value:
 
@@ -276,7 +276,7 @@ Constraints
 
 * There are no business rule constraints for this service.
 
-Outputs
+Output
 
 * The following output uses a sample admin_id value:
 
