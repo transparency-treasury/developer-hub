@@ -425,7 +425,7 @@ There are no business rule constraints for this service.
 
 [Top](#page_top)
 
-##### Status Report of U.S. Government Reserve<a id="gold"></a>
+##### Status Report of U.S. Government Gold Reserve<a id="gold"></a>
 
 The Status Report of U.S. Government Gold Reserve (Gold Report): Reflects gold bullion and gold coins owned by the federal government. The report summarizes the fine troy ounces and the book value of gold held by various facilities as well as identifies the value of gold coins and bullion on display at Federal Reserve banks; coins and bullion in reserve at the Federal Reserve Bank of New York and gold held by U.S. Mint facilities.
 
