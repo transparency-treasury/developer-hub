@@ -133,7 +133,7 @@ There are no business rule contraints for this service.
 * Examples
 
   * The following example would return the complete dataset:
-  '../download/top/apiKey=DEMO_KEY&responseFormat=csv'
+    * '../download/top/apiKey=DEMO_KEY&responseFormat=csv'
 
 
 
@@ -161,15 +161,15 @@ Returns the Revenue Collections Management CIR data in available formats.
 
 * Constraints
 
-    The following constraints are applied to API requests.
+  * The following constraints are applied to API requests.
 
-  * EndYear must be greater than or equal to StartYear or the return result will be empty.
+    * EndYear must be greater than or equal to StartYear or the return result will be empty.
 
 * Output
 
-    Output from this function is a JSON or XML file. Example JSON output:
+  * Output from this function is a JSON or XML file. Example JSON output:
 
-  * <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1/cir/results?apiKey=DEMOKEY'>Try it Out!</a>  
+    * <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1/cir/results?apiKey=DEMOKEY'>Try it Out!</a>  
 
 * Examples
 
@@ -200,15 +200,18 @@ Returns the complete list of Data Registry elements.
 
 * Constraints
 
-There are no business rule constraints for this service.
+  * There are no business rule constraints for this service.
 
 * Output
-  * <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1/registry/list?apiKey=DEMOKEY'>Try it Out!</a>
+
+  * Output from this function is a JSON file. Example JSON output:
+
+    * <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1/registry/list?apiKey=DEMOKEY'>Try it Out!</a>
 
 * Examples
 
-* The following example would return the single instance details:
-  `../registry/list`
+  * The following example would return the single instance details:* Output from this function is a JSON or XML file. Example JSON output:* Output from this function is a JSON or XML file. Example JSON output:* Output from this function is a JSON or XML file. Example JSON output:
+    * `../registry/list`
 
 
 ###### Situational
