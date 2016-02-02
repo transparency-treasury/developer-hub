@@ -497,7 +497,7 @@ ul.repo-list.no-padding {
 }
 
 .header {
-    border-bottom: 4px solid $nav-color;
+    border-bottom: 4px solid #CCA651;
     width: 100%;
     // background-color: #fff;
     background-color: #0E3253;
@@ -736,7 +736,7 @@ footer a:hover {
         width: 11em;
         margin-right: .75em;
         margin-left: .75em;
-        margin-top: 5em;
+        margin-top: 10em;
         color: #75787B;
     }
 
@@ -751,7 +751,7 @@ footer a:hover {
         width: 66%;
         float: right;
         margin-bottom: 7.5em;
-        margin-top: 7em;
+        margin-top: 10em;
         margin-left: 2%;
     }
 
@@ -789,13 +789,13 @@ footer a:hover {
     }
 
     aside {
-        margin-top: 5em;
+        margin-top: 10em;
         width: 13em;
         position: fixed;
     }
 
     .main-content {
-        margin-top: 6.75em;
+        margin-top: 10em;
     }
 
     .page-title {
