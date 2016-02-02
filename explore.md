@@ -159,10 +159,11 @@ Query the CIR data
 
 Returns the Revenue Collections Management CIR data in available formats.
 
-* Access Path
-  * `GET https://api.transparency.treasury.gov/services/api/v1/cir/results`
+Access Path
 
-* Request Parameters
+* `GET https://api.transparency.treasury.gov/services/api/v1/cir/results`
+
+Request Parameters
 
 | Parameter  | Required |  Default | Format | Description |
 | ------------- | -------------| ------------- | -------------| -------------|
@@ -171,25 +172,25 @@ Returns the Revenue Collections Management CIR data in available formats.
 | EndYear | No | Most Recent Available Year | YYYY | Ending fiscal year for the data to return (>=) in YYYY format. |
 | responseFormat | No | json | string | Format to receive the result content.  Allowed values are json, xml and csv. |
 
-* Constraints
+Constraints
 
-  * The following constraints are applied to API requests.
+* The following constraints are applied to API requests.
 
-    * EndYear must be greater than or equal to StartYear or the return result will be empty.
+  * EndYear must be greater than or equal to StartYear or the return result will be empty.
 
-* Output
+Output
 
-  * Output from this function is a JSON or XML file. Example JSON output:
+* Output from this function is a JSON or XML file. Example JSON output:
 
-    * <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1/cir/results?apiKey=DEMOKEY'>Try it Out!</a>  
+  * <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1/cir/results?apiKey=DEMOKEY'>Try it Out!</a>  
 
-* Examples
+Examples
 
-  * The following example would return the complete dataset in json format:
-    * `..cir/results?apiKey=DEMO_KEY&responseFormat=json`
+* The following example would return the complete dataset in json format:
+  * `..cir/results?apiKey=DEMO_KEY&responseFormat=json`
 
-  * The following example would return data for the years 2007 through 2011 inclusive, in xml format:
-    * `..cir/results?apiKey=DEMO_KEY&StartYear=2007&EndYear=2001&responseFormat=json`
+* The following example would return data for the years 2007 through 2011 inclusive, in xml format:
+  * `..cir/results?apiKey=DEMO_KEY&StartYear=2007&EndYear=2001&responseFormat=json`
 
 
 [Top](#page_top)
@@ -201,88 +202,91 @@ The purpose of the Fiscal Service Data Registry is to promote the common identif
 ###### List Data Registry Elements
 Returns the complete list of Data Registry elements.
 
-* Access Path
-  * `GET https://api.transparency.treasury.gov/services/api/v1/registry/list`
+Access Path
 
-* Request Parameters
+* `GET https://api.transparency.treasury.gov/services/api/v1/registry/list`
+
+Request Parameters
 
 | Parameter  | Required |  Default | Format | Description |
 | ------------- | -------------| ------------- | -------------| -------------|
 | apiKey | Yes | | string | Your developer API key. |
 
-* Constraints
+Constraints
 
-  * There are no business rule constraints for this service.
+* There are no business rule constraints for this service.
 
-* Output
+Output
 
-  * Output from this function is a JSON file. Example JSON output:
+* Output from this function is a JSON file. Example JSON output:
 
-    * <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1/registry/list?apiKey=DEMOKEY'>Try it Out!</a>
+  * <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1/registry/list?apiKey=DEMOKEY'>Try it Out!</a>
 
-* Examples
+Examples
 
-  * The following example would return the single instance details:
-    * Output from this function is a JSON or XML file. Example JSON output:  
-      * `../registry/list`
+* The following example would return the single instance details:
+  * Output from this function is a JSON or XML file. Example JSON output:  
+    * `../registry/list`
 
 
 ###### Situational
 Get the situational metadata associated with a content element.
 
-* Access Path
-  * `GET https://api.transparency.treasury.gov/services/api/v1/registry/situational`
+Access Path
 
-* Request Parameters
+* `GET https://api.transparency.treasury.gov/services/api/v1/registry/situational`
+
+Request Parameters
 
 | Parameter  | Required |  Default | Format | Description |
 | ------------- | -------------| ------------- | -------------| -------------|
 | apiKey | Yes | | string | Your developer API key. |
 | admin_id | Yes | | string | Administrative ID of the element to retrieve from the list data registry elements call.  Changes on data load. |
 
-* Constraints
+Constraints
 
-  * There are no business rule contraints for this service.
+* There are no business rule contraints for this service.
 
-* Outputs
+Outputs
 
-  * The following output uses a sample admin_id value:
+* The following output uses a sample admin_id value:
 
-    * <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1/registry/situational?apiKey=DEMOKEY&admin_id=31877'>Try it Out!</a>
+  * <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1/registry/situational?apiKey=DEMOKEY&admin_id=31877'>Try it Out!</a>
 
-* Examples
+Examples
 
-  * The following example would return the single instance details:
-    * `../registry/situational?apiKey=DEMO_KEY&admin_id=ABC123`
+* The following example would return the single instance details:
+  * `../registry/situational?apiKey=DEMO_KEY&admin_id=ABC123`
 
 ###### Business Rule
 Get the business rules metadata associated with a content element.
 
-* Access Path
-  * `GET https://api.transparency.treasury.gov/services/api/v1/registry/businessrule`
+Access Path
 
-* Request Parameters
+* `GET https://api.transparency.treasury.gov/services/api/v1/registry/businessrule`
+
+Request Parameters
 
 | Parameter  | Required |  Default | Format | Description |
 | ------------- | -------------| ------------- | -------------| -------------|
 | apiKey | Yes | | string | Your developer API key. |
 | admin_id | Yes | | string | Administrative ID of the element to retrieve from the list data registry elements call.  Changes on data load. |
 
-* Constraints
+Constraints
 
-  * There are no business rule constraints for this service.
+* There are no business rule constraints for this service.
 
-* Outputs
+Outputs
 
-  * The following output uses a sample admin_id value:
+* The following output uses a sample admin_id value:
 
-    * <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1/registry/businessrule?apiKey=DEMOKEY&admin_id=31877'>Try it Out!</a>
+  * <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1/registry/businessrule?apiKey=DEMOKEY&admin_id=31877'>Try it Out!</a>
 
 
-* Examples
+Examples
 
-  * The following example would return the single instance details:
-    * `../registry/businessrule?apiKey=DEMO_KEY&admin_id=ABC123`
+* The following example would return the single instance details:
+  * `../registry/businessrule?apiKey=DEMO_KEY&admin_id=ABC123`
 
 [Top](#page_top)
 
@@ -293,26 +297,28 @@ Debt to the Penny us the total public debt to the public reported daily. Public 
 ###### List Debt to the Penny
 Returns the complete list of Debt to the Penny elements.
 
-* Access Path
-  * `GET https://api.transparency.treasury.gov/services/api/fiscal_service/v1/accounting/od/debt_to_penny`
+Access Path
 
-* Request Parameters
+* `GET https://api.transparency.treasury.gov/services/api/fiscal_service/v1/accounting/od/debt_to_penny`
+
+Request Parameters
 
 | Parameter  | Required |  Default | Format | Description |
 | ------------- | -------------| ------------- | -------------| -------------|
 | apiKey | Yes | | string | Your developer API key. |
 
-* Constraints
+Constraints
 
-  There are no business rule constraints for this service.
+* There are no business rule constraints for this service.
 
-* Output
-  * <a target='blank' href='https://api.transparency.treasury.gov/services/api/fiscal_service/v1/accounting/od/debt_to_penny?apiKey=DEMOKEY'>Try it Out!</a>
+Output
 
-* Examples
+* <a target='blank' href='https://api.transparency.treasury.gov/services/api/fiscal_service/v1/accounting/od/debt_to_penny?apiKey=DEMOKEY'>Try it Out!</a>
 
-  * The following example would return the single instance details:
-    * `../do/debt_to_penny`
+Examples
+
+* The following example would return the single instance details:
+  * `../do/debt_to_penny`
 
 
 [Top](#page_top)
@@ -324,26 +330,28 @@ The Status Report of U.S. Government Gold Reserve (Gold Report): Reflects gold b
 ###### Status Report of U.S. Government Gold Reserve
 Returns the complete list of Status Report of U.S. Government Gold Reserve elements.
 
-* Access Path
-  * `GET https://api.transparency.treasury.gov/services/api/fiscal_service/v1/accounting/od/gold_reserve`
+Access Path
 
-* Request Parameters
+* `GET https://api.transparency.treasury.gov/services/api/fiscal_service/v1/accounting/od/gold_reserve`
+
+Request Parameters
 
 | Parameter  | Required |  Default | Format | Description |
 | ------------- | -------------| ------------- | -------------| -------------|
 | apiKey | Yes | | string | Your developer API key. |
 
-* Constraints
+Constraints
 
-  There are no business rule constraints for this service.
+* There are no business rule constraints for this service.
 
-* Output
-  * <a target='blank' href='https://api.transparency.treasury.gov/services/api/fiscal_service/v1/od/gold_reserve?apiKey=DEMOKEY'>Try it Out!</a>
+Output
 
-* Examples
+* <a target='blank' href='https://api.transparency.treasury.gov/services/api/fiscal_service/v1/od/gold_reserve?apiKey=DEMOKEY'>Try it Out!</a>
 
-  * The following example would return the single instance details:
-    *`../od/gold_reserve`
+Examples
+
+* The following example would return the single instance details:
+  *`../od/gold_reserve`
 
 
 [Top](#page_top)
