@@ -21,6 +21,8 @@ The APIs available on transparency.treasury.gov include:
 *	[Treasury Offset Program (TOP)](#top)
 *	[Revenue Collections Management (CIR)](#cir)
 *	[Data Registry](#data)
+* [Debt to Penny](#penny)
+* [Gold Reserve](#gold)
 
 ##### Treasury Report on Receivables <a id="tror"></a>
 
@@ -392,7 +394,7 @@ There are no business rule constraints for this service.
 
 [Top](#page_top)
 
-##### Debt to the Penny<a id="data"></a>
+##### Debt to the Penny<a id="penny"></a>
 
 Debt to the Penny us the total public debt to the public reported daily. Public debt is made up as public debt securities issued by the U.S. Treasury. U.S. Treasury securities primarily consist of marketable Treasury securities (bills, notes and bonds), savings bonds and special securities issued to state and local governments.
 
