@@ -219,7 +219,6 @@ Constraints
 Output
 
 * Output from this function is a JSON file. Example JSON output:
-
   * <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1/registry/list?apiKey=DEMOKEY'>Try it Out!</a>
 
 Examples
@@ -250,7 +249,6 @@ Constraints
 Output
 
 * The following output uses a sample admin_id value:
-
   * <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1/registry/situational?apiKey=DEMOKEY&admin_id=31877'>Try it Out!</a>
 
 Examples
@@ -279,7 +277,6 @@ Constraints
 Output
 
 * The following output uses a sample admin_id value:
-
   * <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1/registry/businessrule?apiKey=DEMOKEY&admin_id=31877'>Try it Out!</a>
 
 
