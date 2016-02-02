@@ -351,7 +351,7 @@ Output
 Examples
 
 * The following example would return the single instance details:
-  *`../od/gold_reserve`
+  * `../od/gold_reserve`
 
 
 [Top](#page_top)
