@@ -210,8 +210,9 @@ Returns the complete list of Data Registry elements.
 
 * Examples
 
-  * The following example would return the single instance details:* Output from this function is a JSON or XML file. Example JSON output:* Output from this function is a JSON or XML file. Example JSON output:* Output from this function is a JSON or XML file. Example JSON output:
-    * `../registry/list`
+  * The following example would return the single instance details:
+    * Output from this function is a JSON or XML file. Example JSON output:  
+      * `../registry/list`
 
 
 ###### Situational
@@ -229,15 +230,18 @@ Get the situational metadata associated with a content element.
 
 * Constraints
 
-There are no business rule contraints for this service.
+  * There are no business rule contraints for this service.
 
 * Outputs
 
+  * The following output uses a sample admin_id value:
+
+    * <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1/registry/situational?apiKey=DEMOKEY&admin_id=31877'>Try it Out!</a>
 
 * Examples
 
-* The following example would return the single instance details:
-  `../registry/situational?apiKey=DEMO_KEY&admin_id=ABC123`
+  * The following example would return the single instance details:
+    * `../registry/situational?apiKey=DEMO_KEY&admin_id=ABC123`
 
 ###### Business Rule
 Get the business rules metadata associated with a content element.
@@ -254,15 +258,19 @@ Get the business rules metadata associated with a content element.
 
 * Constraints
 
-There are no business rule constraints for this service.
+  * There are no business rule constraints for this service.
 
 * Outputs
+
+  * The following output uses a sample admin_id value:
+
+    * <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1/registry/businessrule?apiKey=DEMOKEY&admin_id=31877'>Try it Out!</a>
 
 
 * Examples
 
-* The following example would return the single instance details:
-  `../registry/businessrule?apiKey=DEMO_KEY&admin_id=ABC123`
+  * The following example would return the single instance details:
+    * `../registry/businessrule?apiKey=DEMO_KEY&admin_id=ABC123`
 
 [Top](#page_top)
 
