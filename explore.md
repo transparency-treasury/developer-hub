@@ -282,7 +282,7 @@ Debt to the Penny us the total public debt to the public reported daily. Public 
 Returns the complete list of Debt to the Penny elements.
 
 * Access Path
-  * `GET https://api.transparency.treasury.gov/services/api/v1/od/debt_to_penny/list`
+  * `GET https://api.transparency.treasury.gov/services/api/fiscal_service/v1/accounting/od/debt_to_penny`
 
 * Request Parameters
 
@@ -295,7 +295,7 @@ Returns the complete list of Debt to the Penny elements.
 There are no business rule constraints for this service.
 
 * Output
-  * <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1/od/debt_to_penny/list?apiKey=DEMOKEY'>Try it Out!</a>
+  * <a target='blank' href='https://api.transparency.treasury.gov/services/api/fiscal_service/v1/accounting/od/debt_to_penny?apiKey=DEMOKEY'>Try it Out!</a>
 
 * Examples
 

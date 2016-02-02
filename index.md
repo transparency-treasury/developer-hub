@@ -11,8 +11,6 @@ To meet these objectives, the Treasury’s Bureau of the Fiscal Service (Fiscal 
 
 
 
-##  Content
-
 ###  Overview
 
 The Application Program Interface (API)s made available on transparency.treasury.gov, originate from financial data provided by the Bureau of the Fiscal Service, and can facilitate everything from advanced analytics to simple reports hosted in separate programs or on separate websites.
