@@ -32,47 +32,58 @@ The Treasury's Report on Receivables and Debt Collection Activities (TROR) is th
 ###### Download TROR Data
 Returns the complete TROR data set in CSV, JSON or XML format.
 
-* Access Path
-  * `GET https://api.transparency.treasury.gov/services/api/v1/download/tror`
+Access Path
 
-* Request Parameters
+* `GET https://api.transparency.treasury.gov/services/api/v1/download/tror`
+
+Request Parameters
 
 | Parameter | Format | Description |
 | ------------- | -------------| -------------|
 | apiKey | string | Your developer API key. |
 | responseFormat | string | Format to receive the result content. Allowed values are json, xml and csv. |
 
-* Constraints
-  * There are no business rul constraints for this service.
+Constraints
 
-* Output
-  * <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1/download/tror?apiKey=DEMOKEY'>Try it Out!</a>
-  * Output from this function is a JSON, XML or CSV file with the following example CSV data:
+* There are no business rul constraints for this service.
 
-* Examples
-  * The following example would return the complete dataset in CSV format:
-  * `../download/tror?apiKey=DEMO_KEY&responseFormat=csv`
+Output
+
+* Output from this function is a JSON, XML or CSV file with the following example CSV data:
+* <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1/download/tror?apiKey=DEMOKEY'>Try it Out!</a>
+
+Examples
+
+* The following example would return the complete dataset in CSV format:
+* `../download/tror?apiKey=DEMO_KEY&responseFormat=csv`
 
 ###### Query TROR Data
 returns selected TROR data.
 
-* Access Path
-  * Provides access to the Collections on Delinquent Debt data:
-    * `../tror/collectionsondelinquentdebt`
-  * Provides access to Outstanding Receivables Data:
-    * `../tror/Outstandingreceivables`
-  * Provides access to New Receivables data:
-    * `../tror/newreceivables`
-  * Provides access to Collections on Receivables data:
-    * `../tror/collectionsonreceivables`
-  * Provides access to Outstanding Delinquent Debt data:
-    * `../tror/outstandingdelinquentdebt`
-  * Provides access to Delinquent Debt Greater Than and Less Than One Year data:
-    * `../tror/delinquentdebtyear`
-  * Provides access to Delinquent Debt by Age data:
-    * `../tror/delinquentdebtbyage`
+Access Path
 
-* Request Parameters
+* Provides access to the Collections on Delinquent Debt data:
+  * `../tror/collectionsondelinquentdebt`
+
+* Provides access to Outstanding Receivables Data:
+  * `../tror/Outstandingreceivables`
+
+* Provides access to New Receivables data:
+  * `../tror/newreceivables`
+
+* Provides access to Collections on Receivables data:
+  * `../tror/collectionsonreceivables`
+
+* Provides access to Outstanding Delinquent Debt data:
+  * `../tror/outstandingdelinquentdebt`
+
+* Provides access to Delinquent Debt Greater Than and Less Than One Year data:
+  * `../tror/delinquentdebtyear`
+
+* Provides access to Delinquent Debt by Age data:
+  * `../tror/delinquentdebtbyage`
+
+Request Parameters
 
 | Parameter | Format | Description |
 | ------------- | -------------| -------------|
@@ -87,23 +98,22 @@ returns selected TROR data.
 |  | |Optional, default value is 1- all receivable types.|
 | responseFormat | string | Format to receive the result content. Allowed values are json, xml and csv. |
 
-* Constraints
-  * There are no business rule constraints for this service.
+Constraints
 
-* Outputs
-  * Output from this function is a JSON, XML or CSV file. No example output available.
+* There are no business rule constraints for this service.
 
-* Examples
-  * The following example would return the complete Collections on Delinquent Debt data in XML format:
-    * `../collectionsondelinquentdebt?apiKey=DEMO_KEY&responseFormat=xml`
+Outputs
 
-  * The following example would return the Outstanding Receivables data for all quarters of fiscal year 2012 in JSON format:
-    * `../outstandingreceivables?apiKey=DEMO_KEY&fiscalYear=2012&responseFormat=json`
+* Output from this function is a JSON, XML or CSV file. No example output available.
 
-  * The following example would return the complete Delinquent Debt by Age dataset for fiscal quarter 3 for all years in CSV format:
-    * `../delinquentdebtbyage?apiKey=DEMO_KEY&fiscalQuarter=3&responseFormat=csv`
+Examples
 
-
+* The following example would return the complete Collections on Delinquent Debt data in XML format:
+  * `../collectionsondelinquentdebt?apiKey=DEMO_KEY&responseFormat=xml`
+* The following example would return the Outstanding Receivables data for all quarters of fiscal year 2012 in JSON format:
+  * `../outstandingreceivables?apiKey=DEMO_KEY&fiscalYear=2012&responseFormat=json`
+* The following example would return the complete Delinquent Debt by Age dataset for fiscal quarter 3 for all years in CSV format:
+  * `../delinquentdebtbyage?apiKey=DEMO_KEY&fiscalQuarter=3&responseFormat=csv`
 
 [Top](#page_top)
 
@@ -114,26 +124,28 @@ The Fiscal Service helps maximize delinquent debt recovery efforts on behalf of 
 ###### Download TOP Data
 Returns the complete TOP data set in comma separated value (CSV) format.
 
-* Access Path
-  * `GET https://api.transparency.treasury.gov/services/api/v1/download/top`
+Access Path
 
-* Request Parameters
+* `GET https://api.transparency.treasury.gov/services/api/v1/download/top`
+
+Request Parameters
 
 | Parameter  | Required |  Default | Format | Description |
 | ------------- | -------------| ------------- | -------------| -------------|
 | apiKey | Yes | | string | Your developer API key. |
 
-* Constraints
+Constraints
 
-There are no business rule contraints for this service.
+* There are no business rule contraints for this service.
 
-* Output
-  * <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1/download/top?apiKey=DEMOKEY'>Try it Out!</a>
+Output
 
-* Examples
+* <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1/download/top?apiKey=DEMOKEY'>Try it Out!</a>
 
-  * The following example would return the complete dataset:
-    * '../download/top/apiKey=DEMO_KEY&responseFormat=csv'
+Examples
+
+* The following example would return the complete dataset:
+  * '../download/top/apiKey=DEMO_KEY&responseFormat=csv'
 
 
 
@@ -292,15 +304,15 @@ Returns the complete list of Debt to the Penny elements.
 
 * Constraints
 
-There are no business rule constraints for this service.
+  There are no business rule constraints for this service.
 
 * Output
   * <a target='blank' href='https://api.transparency.treasury.gov/services/api/fiscal_service/v1/accounting/od/debt_to_penny?apiKey=DEMOKEY'>Try it Out!</a>
 
 * Examples
 
-* The following example would return the single instance details:
-  `../do/debt_to_penny/list`
+  * The following example would return the single instance details:
+    * `../do/debt_to_penny`
 
 
 [Top](#page_top)
@@ -313,7 +325,7 @@ The Status Report of U.S. Government Gold Reserve (Gold Report): Reflects gold b
 Returns the complete list of Status Report of U.S. Government Gold Reserve elements.
 
 * Access Path
-  * `GET https://api.transparency.treasury.gov/services/api/v1//list`
+  * `GET https://api.transparency.treasury.gov/services/api/fiscal_service/v1/accounting/od/gold_reserve`
 
 * Request Parameters
 
@@ -323,15 +335,15 @@ Returns the complete list of Status Report of U.S. Government Gold Reserve eleme
 
 * Constraints
 
-There are no business rule constraints for this service.
+  There are no business rule constraints for this service.
 
 * Output
-  * <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1/od/gold_reserve/list?apiKey=DEMOKEY'>Try it Out!</a>
+  * <a target='blank' href='https://api.transparency.treasury.gov/services/api/fiscal_service/v1/od/gold_reserve?apiKey=DEMOKEY'>Try it Out!</a>
 
 * Examples
 
-* The following example would return the single instance details:
-  `../od/gold_reserve/list`
+  * The following example would return the single instance details:
+    *`../od/gold_reserve`
 
 
 [Top](#page_top)
