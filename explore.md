@@ -30,7 +30,7 @@ The APIs available on transparency.treasury.gov include:
 The Treasury's Report on Receivables and Debt Collection Activities (TROR) is the federal government’s primary means for collecting data on the status of non-tax receivables (delinquent and non-delinquent debt) owed to the United States.
 
 ###### Download TROR Data
-Returns the complete TROR data set in CSV, JSON or XML format.
+Returns the TROR data set in CSV, JSON or XML format.
 
 Access Path
 
@@ -45,7 +45,7 @@ Request Parameters
 
 Constraints
 
-* There are no business rul constraints for this service.
+* There are no business constraints for this service.
 
 Output
 
@@ -54,7 +54,7 @@ Output
 
 Examples
 
-* The following example would return the complete dataset in CSV format:
+* The following example would return the dataset in CSV format:
 * `../download/tror?apiKey=DEMO_KEY&responseFormat=csv`
 
 ###### Query TROR Data
@@ -108,11 +108,11 @@ Outputs
 
 Examples
 
-* The following example would return the complete Collections on Delinquent Debt data in XML format:
+* The following example would return the Collections on Delinquent Debt data in XML format:
   * `../collectionsondelinquentdebt?apiKey=DEMO_KEY&responseFormat=xml`
 * The following example would return the Outstanding Receivables data for all quarters of fiscal year 2012 in JSON format:
   * `../outstandingreceivables?apiKey=DEMO_KEY&fiscalYear=2012&responseFormat=json`
-* The following example would return the complete Delinquent Debt by Age dataset for fiscal quarter 3 for all years in CSV format:
+* The following example would return the Delinquent Debt by Age dataset for fiscal quarter 3 for all years in CSV format:
   * `../delinquentdebtbyage?apiKey=DEMO_KEY&fiscalQuarter=3&responseFormat=csv`
 
 [Top](#page_top)
@@ -122,7 +122,7 @@ Examples
 The Fiscal Service helps maximize delinquent debt recovery efforts on behalf of the states and federal agencies through the Treasury Offset Program (TOP).
 
 ###### Download TOP Data
-Returns the complete TOP data set in comma separated value (CSV) format.
+Returns the TOP data set in comma separated value (CSV) format.
 
 Access Path
 
@@ -144,7 +144,7 @@ Output
 
 Examples
 
-* The following example would return the complete dataset:
+* The following example would return the dataset:
   * '../download/top/apiKey=DEMO_KEY&responseFormat=csv'
 
 
@@ -186,7 +186,7 @@ Output
 
 Examples
 
-* The following example would return the complete dataset in json format:
+* The following example would return the dataset in json format:
   * `..cir/results?apiKey=DEMO_KEY&responseFormat=json`
 
 * The following example would return data for the years 2007 through 2011 inclusive, in xml format:
@@ -200,7 +200,7 @@ Examples
 The purpose of the Fiscal Service Data Registry is to promote the common identification, use and sharing of data/information across the federal government. The registry contains information about definitions, authoritative sources, data types, formats and uses of common data. Responsibility for establishing and maintaining the Fiscal Service Data Registry and data-related standards falls under the Fiscal Service Enterprise Architecture Team.
 
 ###### List Data Registry Elements
-Returns the complete list of Data Registry elements.
+Returns the list of Data Registry elements.
 
 Access Path
 
@@ -292,7 +292,7 @@ Examples
 Debt to the Penny is the total public debt to the public reported daily. Public debt is made up as public debt securities issued by the U.S. Treasury. U.S. Treasury securities primarily consist of marketable Treasury securities (bills, notes and bonds), savings bonds and special securities issued to state and local governments.
 
 ###### List Debt to the Penny
-Returns the complete list of Debt to the Penny elements.
+Returns the list of Debt to the Penny elements.
 
 Access Path
 
@@ -325,7 +325,7 @@ Examples
 The Status Report of U.S. Government Gold Reserve (Gold Report): Reflects gold bullion and gold coins owned by the federal government. The report summarizes the fine troy ounces and the book value of gold held by various facilities as well as identifies the value of gold coins and bullion on display at Federal Reserve banks; coins and bullion in reserve at the Federal Reserve Bank of New York and gold held by U.S. Mint facilities.
 
 ###### Status Report of U.S. Government Gold Reserve
-Returns the complete list of Status Report of U.S. Government Gold Reserve elements.
+Returns the list of Status Report of U.S. Government Gold Reserve elements.
 
 Access Path
 
