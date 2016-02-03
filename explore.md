@@ -24,7 +24,8 @@ The APIs available on transparency.treasury.gov include:
 * [Debt to Penny](#penny)
 * [Gold Reserve](#gold)
 
-##### Treasury Report on Receivables <a id="tror" ></a>
+<div id="tror" class="pageAnchor"></div>
+##### Treasury Report on Receivables <a></a>
 
 
 The Treasury's Report on Receivables and Debt Collection Activities (TROR) is the federal government’s primary means for collecting data on the status of non-tax receivables (delinquent and non-delinquent debt) owed to the United States.
@@ -117,7 +118,8 @@ Examples
 
 [Top](#page_top)
 
-##### Treasury Offset Program (TOP) <a id="top"></a>
+<div id="top" class="pageAnchor"></div>
+##### Treasury Offset Program (TOP) <a></a>
 
 The Fiscal Service helps maximize delinquent debt recovery efforts on behalf of the states and federal agencies through the Treasury Offset Program (TOP).
 
@@ -151,7 +153,8 @@ Examples
 
 [Top](#page_top)
 
-##### Revenue Collections Management (CIR) <a id="cir"></a>
+<div id="cir" class="pageAnchor"></div>
+##### Revenue Collections Management (CIR) <a></a>
 
 The Fiscal Service administers the world’s largest government funds collections system through a network of more than 10,000 financial institutions. The bureau collects federal revenues, such as individual and corporate income tax deposits, customs duties, fees for government service, fines, and loan repayments.
 
@@ -195,7 +198,8 @@ Examples
 
 [Top](#page_top)
 
-##### Data Registry <a id="data"></a>
+<div id="data" class="pageAnchor"></div>
+##### Data Registry <a></a>
 
 The purpose of the Fiscal Service Data Registry is to promote the common identification, use and sharing of data/information across the federal government. The registry contains information about definitions, authoritative sources, data types, formats and uses of common data. Responsibility for establishing and maintaining the Fiscal Service Data Registry and data-related standards falls under the Fiscal Service Enterprise Architecture Team.
 
@@ -287,7 +291,8 @@ Examples
 
 [Top](#page_top)
 
-##### Debt to the Penny<a id="penny"></a>
+<div id="penny" class="pageAnchor"></div>
+##### Debt to the Penny<a></a>
 
 Debt to the Penny is the total public debt to the public reported daily. Public debt is made up as public debt securities issued by the U.S. Treasury. U.S. Treasury securities primarily consist of marketable Treasury securities (bills, notes and bonds), savings bonds and special securities issued to state and local governments.
 
@@ -320,7 +325,8 @@ Examples
 
 [Top](#page_top)
 
-##### Status Report of U.S. Government Gold Reserve<a id="gold"></a>
+<div id="gold" class="pageAnchor"></div>
+##### Status Report of U.S. Government Gold Reserve<a></a>
 
 The Status Report of U.S. Government Gold Reserve (Gold Report): Reflects gold bullion and gold coins owned by the federal government. The report summarizes the fine troy ounces and the book value of gold held by various facilities as well as identifies the value of gold coins and bullion on display at Federal Reserve banks; coins and bullion in reserve at the Federal Reserve Bank of New York and gold held by U.S. Mint facilities.
 
