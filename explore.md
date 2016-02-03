@@ -21,8 +21,8 @@ The APIs available on transparency.treasury.gov include:
 *	[Treasury Offset Program (TOP)](#top)
 *	[Revenue Collections Management (CIR)](#cir)
 *	[Data Registry](#data)
-* [Debt to Penny (Open Data)](#penny)
-* [Gold Reserve (Open Data)](#gold)
+* [Debt to Penny](#penny)
+* [Gold Reserve](#gold)
 
 ##### Treasury Report on Receivables <a id="tror" ></a>
 
@@ -155,7 +155,7 @@ Examples
 
 The Fiscal Service administers the world’s largest government funds collections system through a network of more than 10,000 financial institutions. The bureau collects federal revenues, such as individual and corporate income tax deposits, customs duties, fees for government service, fines, and loan repayments.
 
-Query the CIR data
+###### Query the CIR data
 
 Returns the Revenue Collections Management CIR data in available formats.
 
@@ -289,7 +289,7 @@ Examples
 
 ##### Debt to the Penny<a id="penny"></a>
 
-Debt to the Penny us the total public debt to the public reported daily. Public debt is made up as public debt securities issued by the U.S. Treasury. U.S. Treasury securities primarily consist of marketable Treasury securities (bills, notes and bonds), savings bonds and special securities issued to state and local governments.
+Debt to the Penny is the total public debt to the public reported daily. Public debt is made up as public debt securities issued by the U.S. Treasury. U.S. Treasury securities primarily consist of marketable Treasury securities (bills, notes and bonds), savings bonds and special securities issued to state and local governments.
 
 ###### List Debt to the Penny
 Returns the complete list of Debt to the Penny elements.
