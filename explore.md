@@ -47,7 +47,7 @@ Request Parameters
 
 Constraints
 
-* There are no business constraints for this service.
+* There are no business rule constraints for this service.
 
 Output
 
