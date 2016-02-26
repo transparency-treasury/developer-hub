@@ -186,7 +186,7 @@ Constraints
 
 Output
 
-* Output from this function is a JSON or XML file. Example JSON output:
+*  Output from this function is a JSON or XML file. Example JSON output:
 
   * <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1/cir/results?apiKey=DEMOKEY'>Try it Out!</a>  
 
