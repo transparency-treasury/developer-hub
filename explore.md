@@ -60,7 +60,7 @@ Examples
 * `../download/tror?apiKey=DEMO_KEY&responseFormat=csv`
 
 ###### Query TROR Data
-returns selected TROR data.
+Returns selected TROR data.
 
 Access Path
 
@@ -90,7 +90,7 @@ Request Parameters
 | Parameter | Format | Description |
 | ------------- | -------------| -------------|
 | apiKey | string | Your developer API key. |
-| fiscalYear | integer | selects data for a single fiscal year. Optional, default value is all years, if parameter not provided.|
+| fiscalYear | integer | Selects data for a single fiscal year. Optional, default value is all years, if parameter not provided.|
 |Quarter| integer| Selects data for a single fiscal quarter. Allowed values are 1, 2, 3 and 4. Optional, default value is all quarters, if parameter not provided.|
 |receivableType| integer| Selects type of receivable data to return. Allowed values are: |
 |  | |1 - All receivable types (above, no value = all)|
@@ -123,7 +123,7 @@ Examples
 
 ##### Treasury Offset Program (TOP) <a></a>
 
-The Fiscal Service helps maximize delinquent debt recovery efforts on behalf of the states and federal agencies through the Treasury Offset Program (TOP).
+The Bureau of the Fiscal Service helps maximize delinquent debt recovery efforts on behalf of the states and federal agencies through the Treasury Offset Program (TOP).
 
 ###### Download TOP Data
 Returns the TOP data set in comma separated value (CSV) format.
@@ -159,7 +159,7 @@ Examples
 
 ##### Revenue Collections Management (CIR) <a></a>
 
-The Fiscal Service administers the world’s largest government funds collections system through a network of more than 10,000 financial institutions. The bureau collects federal revenues, such as individual and corporate income tax deposits, customs duties, fees for government service, fines, and loan repayments.
+The Bureau of the Fiscal Service administers the world’s largest government funds collections system through a network of more than 10,000 financial institutions. The bureau collects federal revenues, such as individual and corporate income tax deposits, customs duties, fees for government service, fines, and loan repayments.
 
 ###### Query the CIR data
 
