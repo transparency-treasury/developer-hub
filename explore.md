@@ -181,13 +181,11 @@ Request Parameters
 Constraints
 
 * The following constraints are applied to API requests.
-
   * EndYear must be greater than or equal to StartYear or the return result will be empty.
 
 Output
 
 * Output from this function is a JSON file. Example JSON output:
-
   * <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1/cir/results?apiKey=DEMOKEY'>Try it Out!</a>
 
 Examples
