@@ -182,7 +182,7 @@ Constraints
 
 * The following constraints are applied to API requests.
 
-  * EndYear must be greater than or equal to StartYear or the return result will be empty.
+  * EndYear must be greater than or equal to StartYear of the return result will be empty.
 
 Output
 
@@ -190,13 +190,12 @@ Output
 
   * <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1/cir/results?apiKey=DEMOKEY'>Try it Out!</a>
 
+  * <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1/cir/results?apiKey=DEMOKEY'>Try it Out!</a>
+
 Examples
 
 * The following example would return the dataset in json format:
   * `..cir/results?apiKey=DEMO_KEY&responseFormat=json`
-
-* The following example would return data for the years 2007 through 2011 inclusive, in xml format:
-  * `..cir/results?apiKey=DEMO_KEY&StartYear=2007&EndYear=2001&responseFormat=json`
 
 
 [Top](#page_top)
