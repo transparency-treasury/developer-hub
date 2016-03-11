@@ -181,11 +181,7 @@ Request Parameters
 Constraints
 
 * The following constraints are applied to API requests.
-
   * EndYear must be greater than or equal to StartYear of the return result will be empty.
-=======
-  * EndYear must be greater than or equal to StartYear or the return result will be empty.
->>>>>>> be6b967d2eabe326aafd27ad2ee858e7aa9b076f
 
 Output
 
