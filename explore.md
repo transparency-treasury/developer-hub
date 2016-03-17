@@ -350,7 +350,7 @@ Constraints
 
 Output
 
-* <a target='blank' href='https://api.transparency.treasury.gov/services/api/fiscal_service/v1/od/gold_reserve?apiKey=DEMOKEY'>Try it Out!</a>
+* <a target='blank' href='https://api.transparency.treasury.gov/services/api/fiscal_service/v1/accounting/od/gold_reserve?apiKey=DEMOKEY'>Try it Out!</a>
 
 Examples
 
