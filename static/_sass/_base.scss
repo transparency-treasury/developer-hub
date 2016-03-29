@@ -174,7 +174,7 @@ pre, code {
     border-radius: 0.250em;
     overflow-x: auto;
     padding: 0.125em 0.250em;
-    white-space: nowrap;
+    white-space: pre-line;
 }
 
 pre, code, kbd, samp {
@@ -182,6 +182,8 @@ pre, code, kbd, samp {
     line-height: 1.375;
     margin-bottom: 1.375em;
     font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+    white-space: pre-line;
+
 }
 
 pre {
