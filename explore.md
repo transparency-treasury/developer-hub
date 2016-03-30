@@ -6,7 +6,6 @@ nav: explore
 
 ## Access & Path   <a id="page_top"></a>
 
-
 Each API below can be accessed through a base path, which should be added to the beginning of each call. The base access path for the FIR APIs is:
 
 [https://api.transparency.treasury.gov/services/api/v1/](https://api.transparency.treasury.gov/services/api/v1/)
