@@ -150,7 +150,7 @@ Output
 Examples
 
 * The following example would return the dataset:
-  * '../download/top/apiKey=DEMO_KEY&responseFormat=csv'
+  * '../services/api/fiscal_service/v1/debt/top/federal_collections?apiKey=DEMOKEY&format=csv'
 
 
 
