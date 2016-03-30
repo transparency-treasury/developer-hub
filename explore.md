@@ -129,7 +129,8 @@ Returns the TOP data set in comma separated value (CSV) format.
 
 Access Path
 
-* `GET https://api.transparency.treasury.gov/services/api/v1/download/top`
+* `GET https://api.transparency.treasury.gov/services/api/fiscal_service/v1/debt/top/state_programs?apiKey=DEMOKEY&format=csv`
+* `GET https://api.transparency.treasury.gov/services/api/fiscal_service/v1/debt/top/federal_collections?apiKey=DEMOKEY&format=csv`
 
 Request Parameters
 
@@ -139,11 +140,12 @@ Request Parameters
 
 Constraints
 
-* There are no business rule contraints for this service.
+* There are no business rule constraints for this service.
 
 Output
 
-* <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1/download/top?apiKey=DEMOKEY'>Try it Out!</a>
+* <a target='blank' href='https://api.transparency.treasury.gov/services/api/fiscal_service/v1/debt/top/state_programs?apiKey=DEMOKEY&format=csv'>Try it Out! - State Programs</a>
+* <a target='blank' href='https://api.transparency.treasury.gov/services/api/fiscal_service/v1/debt/top/federal_collections?apiKey=DEMOKEY&format=csv'>Try it Out! - Federal Collections</a>
 
 Examples
 
