@@ -6,7 +6,6 @@ nav: explore
 
 ## Access & Path   <a id="page_top"></a>
 
-
 Each API below can be accessed through a base path, which should be added to the beginning of each call. The base access path for the FIR APIs is:
 
 [https://api.transparency.treasury.gov/services/api/v1/](https://api.transparency.treasury.gov/services/api/v1/)
@@ -130,9 +129,7 @@ Returns the TOP data set in comma separated value (CSV) format.
 
 Access Path
 
-* `GET http://api.transparency.treasury.gov/services/api/fiscal_service/v1/debt/top/federal_collections?format=csv`
-
-* `GET http://api.transparency.treasury.gov/services/api/fiscal_service/v1/debt/top/state_programs?format=csv`
+* `GET https://api.transparency.treasury.gov/services/api/v1/download/top`
 
 Request Parameters
 
@@ -146,9 +143,7 @@ Constraints
 
 Output
 
-* <a target='blank' href='http://api.transparency.treasury.gov/services/api/fiscal_service/v1/debt/top/federal_collections?apiKey=DEMOKEY&format=csv'>Try it Out! - Federal Collections.</a>
-
-* <a target='blank' href='http://api.transparency.treasury.gov/services/api/fiscal_service/v1/debt/top/state_programs?apiKey=DEMOKEY&format=csv'>Try it Out! - State Programs.</a>
+* <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1/download/top?apiKey=DEMOKEY'>Try it Out!</a>
 
 Examples
 

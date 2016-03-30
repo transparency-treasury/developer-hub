@@ -3,26 +3,25 @@
 	"apiVersion": "1.0",
 	"swaggerVersion": "1.2",
 	"resourcePath": "/data",
-	"produces": 
+	"produces":
 	[
 		"application/json",
 		"application/xml"
 	],
-
-	"models": 
+	"models":
 	{
-		
+
 	},
 
-	"apis": 
+	"apis":
 	[
 		{
 			"path": "/data",
-			"operations": 
+			"operations":
 			[
 				{
 					"method": "GET",
-					"produces": 
+					"produces":
 					[
 						"application/json",
 						"application/xml"
@@ -30,9 +29,9 @@
 
 					"nickname": "getDatasets",
 					"summary": "Get a list of all datasets.",
-					"parameters": 
+					"parameters":
 					[
-						
+
 					]
 				}
 			]
@@ -40,11 +39,11 @@
 
 		{
 			"path": "/data/{dataset}",
-			"operations": 
+			"operations":
 			[
 				{
 					"method": "GET",
-					"produces": 
+					"produces":
 					[
 						"application/json",
 						"application/xml"
@@ -52,14 +51,14 @@
 
 					"nickname": "getDataset",
 					"summary": "Get metadata about a dataset.",
-					"parameters": 
+					"parameters":
 					[
 						{
 							"required": true,
-							"allowableValues": 
+							"allowableValues":
 							{
 								"valueType": "LIST",
-								"values": 
+								"values":
 								[
 									"hmda"
 								]
