@@ -51,12 +51,12 @@ Constraints
 Output
 
 * Output from this function is a JSON, XML or CSV file with the following example CSV data:
-* <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1/download/tror?apiKey=DEMOKEY'>Try it Out!</a>
+* <a target='blank' href='https://api.transparency.treasury.gov/services/api/fiscal_service/v1/debt/tror?limit=100&apiKey=demoKey&format=csv'>Try it Out!</a>
 
 Examples
 
 * The following example would return the dataset in CSV format:
-* `../download/tror?apiKey=DEMO_KEY&responseFormat=csv`
+* `../debt/tror?limit=100&apiKey=demoKey&format=csv`
 
 ###### Query TROR Data
 Returns selected TROR data.
@@ -248,7 +248,7 @@ Request Parameters
 
 Constraints
 
-* There are no business rule contraints for this service.
+* There are no business rule constraints for this service.
 
 Output
 
