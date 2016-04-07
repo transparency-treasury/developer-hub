@@ -8,11 +8,11 @@ nav: explore
 
 Each API below can be accessed through a base path, which should be added to the beginning of each call. The base access path for the FIR APIs is:
 
-[https://api.transparency.treasury.gov/services/api/v1/](https://api.transparency.treasury.gov/services/api/v1/)
+`https://api.transparency.treasury.gov/services/api/v1/`
 
 The Individual requests are appended to the path, as in:
 
-[https://api.transparency.treasury.gov/services/api/v1/download/tror/](https://api.transparency.treasury.gov/services/api/v1/download/tror/)  
+`https://api.transparency.treasury.gov/services/api/fiscal_service/v1/debt/tror/analytics_collection_delinquent_debt?pretty_print=no&limit=100&offset=0&apiKey=demoKey&format=csv`  
 
 The APIs available on transparency.treasury.gov include:
 
@@ -35,7 +35,7 @@ Returns the TROR data set in CSV, JSON or XML format.
 
 Access Path
 
-* `GET https://api.transparency.treasury.gov/services/api/v1/download/tror`
+* `GET https://api.transparency.treasury.gov/services/api/fiscal_service/v1/debt/tror?pretty_print=no&limit=100&offset=0&apiKey=demoKey&format=csv`
 
 Request Parameters
 
