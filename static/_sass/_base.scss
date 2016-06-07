@@ -553,7 +553,7 @@ ul.repo-list.no-padding {
 }
 
 .content { /* only here to keep footer sticky */
-    margin-top: 0;
+    /*margin-top: 0;*/
     /*margin-left: 1em;*/
     /*margin-right: 1em;*/
     overflow: auto;
@@ -732,12 +732,13 @@ footer a:hover {
 
     /* LAYOUT */
 
+
     aside {
         position: absolute;
         width: 11em;
         margin-right: .75em;
         margin-left: .75em;
-        margin-top: 10em;
+        /*margin-top: 10em;*/
         color: #75787B;
     }
 
@@ -752,7 +753,7 @@ footer a:hover {
         width: 66%;
         float: right;
         margin-bottom: 7.5em;
-        margin-top: 10em;
+        /*margin-top: 10em;*/
         margin-left: 2%;
     }
 
@@ -772,7 +773,7 @@ footer a:hover {
     }
 
     header {
-        position: fixed;
+        /*position: fixed;*/
     }
 
 }
@@ -785,22 +786,29 @@ footer a:hover {
         text-align: left;
     }
 
+    .content{
+        margin: 1em;
+        min-height: 425px;
+    }
+
     .footer .footer-oss {
         width: 67%;
     }
 
     aside {
-        margin-top: 10em;
+        /*margin-top: 10em;*/
         width: 13em;
-        position: fixed;
+        position: absolute;
     }
 
     .main-content {
-        margin-top: 10em;
+        /*margin-top: 10em;*/
+        width: calc(90% - 13em);
+        float: right;
     }
 
     .page-title {
-    margin: .5em 0em .5em 0em;
+        margin: .5em 0em .5em 0em;
     }
 
     .intro {
@@ -809,7 +817,7 @@ footer a:hover {
     }
 
     .page-title br {
-    display: block;
+        display: block;
     }
 }
 
@@ -818,14 +826,14 @@ footer a:hover {
 
 @media only screen and (min-width: 64em) {
     aside {
-        margin-top: 10em;
+        /*margin-top: 10em;*/
         width: 13.75em;
         margin-right: 0;
         margin-left: 0;
     }
 
     .main-content {
-        margin-top: 10em;
+        /*margin-top: 10em;*/
         margin-left: 0;
     }
 

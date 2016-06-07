@@ -1,0 +1,234 @@
+#%RAML 0.8
+---
+title: Federal Collections
+version: v1
+baseUri: https://transparency.treasury.gov:443/services/api
+protocols: [ HTTP ]
+
+/fiscal_service/v1/debt/top/federal_collections:
+  description: Federal Collections
+  get:
+    queryParameters:
+      fields:
+        displayName: Field List
+        type: string
+        description: Field parameter accepts a comma separated list of field names that the user wants to be returned in the response.
+        example: fields=xxx,yyy,zzz
+        required: false
+        default: 
+      filter:
+        displayName: Filter
+        type: string
+        description: Filter is used to apply logic criteria to each field if necessary (lt, gt, lte, gte, eq, in).
+        example: 1) filter=xxx:eq:value,yyy:lt:1,zzz:gt:10  2) filter=reporting_fiscal_year:in:(2007,2008,2009,2010)
+        required: false
+        default: 
+      sort:
+        displayName: Sorting
+        type: string
+        description: Sorting parameter accepts a comma separated list of field names that the user wants to sort the response by.
+        example: sort=xxx,-yyy,zzz
+        required: false
+        default: 
+      pretty_print:
+        displayName: Pretty Print
+        type: string
+        description: Pretty print will put carriage returns and indentation in the json response so that it can be easily read by a human.
+        example: pretty_print=yes
+        required: false
+        default: no
+      format:
+        displayName: Response Format
+        type: string
+        description: Format is used to define how output method for the response (json, xml, csv).
+        example: format=json
+        required: false
+        default: json
+      limit:
+        displayName: Row Limit
+        type: number
+        description: Limit will set the number of rows that are returned in a request.
+        example: limit=100
+        required: false
+        default: 100
+      offset:
+        displayName: Row Offset
+        type: number
+        description: Offset will set the starting point of the pagination.
+        example: offset=0
+        required: false
+        default: 0
+    responses:
+      200:
+        body:
+          application/xml:
+          application/csv:
+          application/json:
+            schema: |
+              {
+                "type": "object",
+                "$schema": "http://json-schema.org/draft-03/schema",
+                "id": "http://jsonschema.net",
+                "properties": {
+                  "reporting_date": {
+                    "type": "date",
+                    "description": "Calendar Date",
+                    "format": "YYYY-MM-DD"
+                  },
+                  "reporting_calendar_year": {
+                    "type": "year",
+                    "description": "Calendar Year",
+                    "format": "YYYY"
+                  },
+                  "reporting_fiscal_year": {
+                    "type": "year",
+                    "description": "Fiscal Year",
+                    "format": "YYYY"
+                  },
+                  "reporting_calendar_quarter": {
+                    "type": "string",
+                    "description": "Calendar Quarter Number",
+                    "format": ""
+                  },
+                  "reporting_fiscal_quarter": {
+                    "type": "string",
+                    "description": "Fiscal Quarter Number",
+                    "format": ""
+                  },
+                  "reporting_calendar_month": {
+                    "type": "month",
+                    "description": "Calendar Month Number",
+                    "format": "MM"
+                  },
+                  "reporting_fiscal_month": {
+                    "type": "month",
+                    "description": "Fiscal Month Number",
+                    "format": "MM"
+                  },
+                  "creditor_agency_id": {
+                    "type": "string",
+                    "description": "Agency ID",
+                    "format": ""
+                  },
+                  "debt_type_code": {
+                    "type": "string",
+                    "description": "Debt Type Code",
+                    "format": ""
+                  },
+                  "payment_type_id": {
+                    "type": "number",
+                    "description": "Payment Type ID",
+                    "format": "10.2"
+                  },
+                  "payment_agency": {
+                    "type": "number",
+                    "description": "Payment Agency ID",
+                    "format": "10.2"
+                  },
+                  "agency_site": {
+                    "type": "number",
+                    "description": "Agency Site ID",
+                    "format": "10.2"
+                  },
+                  "net_amount": {
+                    "type": "number",
+                    "description": "Total Net Amount",
+                    "format": "10.2"
+                  },
+                  "net_count": {
+                    "type": "number",
+                    "description": "Total Net Count",
+                    "format": "10.2"
+                  },
+                  "gross_amount": {
+                    "type": "number",
+                    "description": "Total Gross Amount",
+                    "format": "10.2"
+                  },
+                  "gross_count": {
+                    "type": "number",
+                    "description": "Total Gross Count",
+                    "format": "10.2"
+                  },
+                  "agency_site_name": {
+                    "type": "string",
+                    "description": "Agency Site Name",
+                    "format": ""
+                  },
+                  "source_agency_site": {
+                    "type": "number",
+                    "description": "Source Agency Site ID",
+                    "format": "10.2"
+                  },
+                  "agency_type": {
+                    "type": "string",
+                    "description": "Agency Site Type Code",
+                    "format": ""
+                  },
+                  "source_agency": {
+                    "type": "string",
+                    "description": "Source Agency Alpha",
+                    "format": ""
+                  },
+                  "payment_agency_nm": {
+                    "type": "string",
+                    "description": "Agency Name",
+                    "format": ""
+                  },
+                  "agency_type_code": {
+                    "type": "string",
+                    "description": "Agency Type Code",
+                    "format": ""
+                  },
+                  "source_agency_1": {
+                    "type": "number",
+                    "description": "Source Agency Numeric",
+                    "format": "10.2"
+                  },
+                  "debt_type_description": {
+                    "type": "string",
+                    "description": "Debt Type Description",
+                    "format": ""
+                  },
+                  "taxable": {
+                    "type": "string",
+                    "description": "Taxable Indicator",
+                    "format": ""
+                  },
+                  "payment_category": {
+                    "type": "string",
+                    "description": "Payment Category Description",
+                    "format": ""
+                  },
+                  "payment_source_code": {
+                    "type": "string",
+                    "description": "Payment Source Code",
+                    "format": ""
+                  },
+                  "payment_source_description": {
+                    "type": "string",
+                    "description": "Payment Source Description",
+                    "format": ""
+                  },
+                  "payment_type_code": {
+                    "type": "string",
+                    "description": "Payment Type Code",
+                    "format": ""
+                  },
+                  "payment_type_description": {
+                    "type": "string",
+                    "description": "Payment Type Description",
+                    "format": ""
+                  },
+                  "creditor_agency_nm": {
+                    "type": "string",
+                    "description": "Creditor Agency Name",
+                    "format": ""
+                  },
+                }
+              }
+      400:
+        body:
+          application/json:
+            example: |
+              {"error":"Invalid Query Param","message":"Invalid query parameter 'foo' with value '[error]'.  For more information please see the documentation."}

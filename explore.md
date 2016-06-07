@@ -12,18 +12,18 @@ Each API below can be accessed through a base path, which should be added to the
 
 The Individual requests are appended to the path, as in:
 
-`https://api.transparency.treasury.gov/services/api/fiscal_service/v1/debt/tror/analytics_collection_delinquent_debt?pretty_print=no&limit=100&offset=0&apiKey=demoKey&format=csv`  
+`https://api.transparency.treasury.gov/services/api/v1/registry/list?apiKey=DEMOKEY`  
 
 The APIs available on transparency.treasury.gov include:
 
-*	[Treasury Report on Receivables (TROR)](#tror)
-*	[Treasury Offset Program (TOP)](#top)
+<!-- *	[Treasury Report on Receivables (TROR)](#tror) -->
+<!-- *	[Treasury Offset Program (TOP)](#top) -->
 *	[Revenue Collections Management (CIR)](#cir)
 *	[Data Registry](#data)
-* [Debt to Penny](#penny)
-* [Gold Reserve](#gold)
+<!-- * [Debt to Penny](#penny) -->
+<!-- * [Gold Reserve](#gold) -->
 
-<div id="tror" class="pageAnchor"></div>
+<!-- <div id="tror" class="pageAnchor"></div>
 
 ##### Treasury Report on Receivables <a></a>
 
@@ -116,9 +116,9 @@ Examples
 * The following example would return the Delinquent Debt by Age dataset for fiscal quarter 3 for all years in CSV format:
   * `../delinquentdebtbyage?apiKey=DEMO_KEY&fiscalQuarter=3&responseFormat=csv`
 
-[Top](#page_top)
+[Top](#page_top) -->
 
-<div id="top" class="pageAnchor"></div>
+<!-- <div id="top" class="pageAnchor"></div>
 
 ##### Treasury Offset Program (TOP) <a></a>
 
@@ -154,7 +154,7 @@ Examples
 
 
 
-[Top](#page_top)
+[Top](#page_top) -->
 
 <div id="cir" class="pageAnchor"></div>
 
@@ -291,7 +291,7 @@ Examples
 
 [Top](#page_top)
 
-<div id="penny" class="pageAnchor"></div>
+<!-- <div id="penny" class="pageAnchor"></div>
 
 ##### Debt to the Penny<a></a>
 
@@ -359,4 +359,4 @@ Examples
   * `../od/gold_reserve`
 
 
-[Top](#page_top)
+[Top](#page_top) -->
