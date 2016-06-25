@@ -7,28 +7,28 @@ protocols: [ HTTPS ]
 
 traits:
   - pageable:
-    queryParameters: 
+    queryParameters:
       fields:
         displayName: Field List
         type: string
         description: Field parameter accepts a comma separated list of field names that the user wants to be returned in the response.
         example: fields=xxx,yyy,zzz
         required: false
-        default: 
+        default:
       filter:
         displayName: Filter
         type: string
         description: Filter is used to apply logic criteria to each field if necessary (lt, gt, lte, gte, eq, in).
         example: 1) filter=xxx:eq:value,yyy:lt:1,zzz:gt:10  2) filter=reporting_fiscal_year:in:(2007,2008,2009,2010)
         required: false
-        default: 
+        default:
       sort:
         displayName: Sorting
         type: string
         description: Sorting parameter accepts a comma separated list of field names that the user wants to sort the response by.
         example: sort=xxx,-yyy,zzz
         required: false
-        default: 
+        default:
       pretty_print:
         displayName: Pretty Print
         type: string
@@ -64,12 +64,12 @@ traits:
     /tfm:
       description: "TFM"
       /top:
-        description: "Treasury Report on Receivables"
+        description: "Treasury Offset Program"
         /federal_collections:
           description: "TFM-Federal Collections"
           is: [pageable]
-          get: 
-            responses: 
+          get:
+            responses:
               200:
                 body:
                   application/xml:
@@ -82,8 +82,8 @@ traits:
         /state_programs:
           description: "TFM-State Programs"
           is: [pageable]
-          get: 
-            responses: 
+          get:
+            responses:
               200:
                 body:
                   application/xml:
@@ -96,12 +96,12 @@ traits:
     /debt:
       description: "debt"
       /top:
-        description: "Treasury Report on Receivables"
+        description: "Treasury Offset Program"
         /state_programs:
           description: "TOP-State Programs"
           is: [pageable]
-          get: 
-            responses: 
+          get:
+            responses:
               200:
                 body:
                   application/xml:
@@ -114,8 +114,8 @@ traits:
         /federal_collections:
           description: "TOP-Federal Collections"
           is: [pageable]
-          get: 
-            responses: 
+          get:
+            responses:
               200:
                 body:
                   application/xml:
@@ -126,12 +126,12 @@ traits:
                   application/json:
 
       /tror:
-        description: "Treasury Offset Program"
+        description: "Treasury Report on Receivables"
         /analytics_delinquent_debt:
           description: "TROR-Analytics Delinquent Debt"
           is: [pageable]
-          get: 
-            responses: 
+          get:
+            responses:
               200:
                 body:
                   application/xml:
@@ -144,8 +144,8 @@ traits:
         /analytics_delinquent_debt_vs_receivables:
           description: "TROR-Analytics Delinquent Debt vs Receivables"
           is: [pageable]
-          get: 
-            responses: 
+          get:
+            responses:
               200:
                 body:
                   application/xml:
@@ -158,8 +158,8 @@ traits:
         /analytics_receivable_accruals_additional_receivables:
           description: "TROR-Analytics Receivable Accruals Additional Receivables"
           is: [pageable]
-          get: 
-            responses: 
+          get:
+            responses:
               200:
                 body:
                   application/xml:
@@ -172,8 +172,8 @@ traits:
         /cnc_debt:
           description: "TROR-Currently Not Collectible Debt"
           is: [pageable]
-          get: 
-            responses: 
+          get:
+            responses:
               200:
                 body:
                   application/xml:
@@ -186,8 +186,8 @@ traits:
         /collections_on_delinquent_debt:
           description: "TROR-Collections on Delinquent Debt"
           is: [pageable]
-          get: 
-            responses: 
+          get:
+            responses:
               200:
                 body:
                   application/xml:
@@ -200,8 +200,8 @@ traits:
         /credit_bureau_reporting:
           description: "TROR-Credit Bureau Reporting"
           is: [pageable]
-          get: 
-            responses: 
+          get:
+            responses:
               200:
                 body:
                   application/xml:
@@ -214,8 +214,8 @@ traits:
         /referral_to_top:
           description: "TROR-Referral to TOP"
           is: [pageable]
-          get: 
-            responses: 
+          get:
+            responses:
               200:
                 body:
                   application/xml:
@@ -228,8 +228,8 @@ traits:
         /1099-c:
           description: "TROR-1099-C"
           is: [pageable]
-          get: 
-            responses: 
+          get:
+            responses:
               200:
                 body:
                   application/xml:
@@ -242,8 +242,8 @@ traits:
         /delinquent_debt:
           description: "TROR-Delinquent Debt"
           is: [pageable]
-          get: 
-            responses: 
+          get:
+            responses:
               200:
                 body:
                   application/xml:
@@ -256,8 +256,8 @@ traits:
         /two_years_delinquent:
           description: "TROR-Two Years Delinquent"
           is: [pageable]
-          get: 
-            responses: 
+          get:
+            responses:
               200:
                 body:
                   application/xml:
@@ -270,8 +270,8 @@ traits:
         /analytics_write_off:
           description: "TROR-Analytics Write Off"
           is: [pageable]
-          get: 
-            responses: 
+          get:
+            responses:
               200:
                 body:
                   application/xml:
@@ -284,8 +284,8 @@ traits:
         /analytics_collections_vs_receivables:
           description: "TROR-Analytics Collections vs Receivables"
           is: [pageable]
-          get: 
-            responses: 
+          get:
+            responses:
               200:
                 body:
                   application/xml:
@@ -298,8 +298,8 @@ traits:
         /analytics_collections_on_receivables:
           description: "TROR-Analytics Collections on Receivables"
           is: [pageable]
-          get: 
-            responses: 
+          get:
+            responses:
               200:
                 body:
                   application/xml:
@@ -312,8 +312,8 @@ traits:
         /analytics_collection_delinquent_debt:
           description: "TROR-Analytics Collection Delinquent Debt"
           is: [pageable]
-          get: 
-            responses: 
+          get:
+            responses:
               200:
                 body:
                   application/xml:
@@ -326,8 +326,8 @@ traits:
         /analytics_cnc_debt:
           description: "TROR-Analytics Currently Not Collectible Debt"
           is: [pageable]
-          get: 
-            responses: 
+          get:
+            responses:
               200:
                 body:
                   application/xml:
@@ -340,8 +340,8 @@ traits:
         /analytics_referral_to_treasury:
           description: "TROR-Analytics Referral to Treasury"
           is: [pageable]
-          get: 
-            responses: 
+          get:
+            responses:
               200:
                 body:
                   application/xml:
@@ -354,8 +354,8 @@ traits:
         /analytics_delinquent_debt_age:
           description: "TROR-Analytics Delinquent Debt Age"
           is: [pageable]
-          get: 
-            responses: 
+          get:
+            responses:
               200:
                 body:
                   application/xml:
@@ -369,11 +369,25 @@ traits:
       description: "accounting"
       /od:
         description: "Open Data"
+        /fip_rates_prices:
+          description: "OD-FIP Rates and Prices"
+          is: [pageable]
+          get:
+            responses:
+              200:
+                body:
+                  application/xml:
+                  application/json:
+                  application/csv:
+              400:
+                body:
+                  application/json:
+
         /debt_to_penny:
           description: "OD-Debt to the Penny"
           is: [pageable]
-          get: 
-            responses: 
+          get:
+            responses:
               200:
                 body:
                   application/xml:
@@ -386,8 +400,8 @@ traits:
         /gold_reserve:
           description: "OD-Gold Reserve"
           is: [pageable]
-          get: 
-            responses: 
+          get:
+            responses:
               200:
                 body:
                   application/xml:
@@ -397,3 +411,44 @@ traits:
                 body:
                   application/json:
 
+        /slgs_statistics:
+          description: "OD-SLGS Statistics"
+          is: [pageable]
+          get:
+            responses:
+              200:
+                body:
+                  application/xml:
+                  application/json:
+                  application/csv:
+              400:
+                body:
+                  application/json:
+
+        /debt_outstanding:
+          description: "OD-Debt Outstanding"
+          is: [pageable]
+          get:
+            responses:
+              200:
+                body:
+                  application/xml:
+                  application/json:
+                  application/csv:
+              400:
+                body:
+                  application/json:
+
+        /exchange_rates:
+          description: "OD-Exchange Rates"
+          is: [pageable]
+          get:
+            responses:
+              200:
+                body:
+                  application/xml:
+                  application/json:
+                  application/csv:
+              400:
+                body:
+                  application/json:

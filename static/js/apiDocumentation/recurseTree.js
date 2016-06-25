@@ -5,6 +5,7 @@ ramlCode.methods.recurseTreeStarter = function(arr, path){
 		endpointLookup = {}, 
 		baseUri,
 		absUrl,
+		validatedUrl,
 		ramlUrl;
 
 	recurseTree(arr, path);
@@ -170,7 +171,8 @@ ramlCode.methods.recurseTreeStarter = function(arr, path){
 		function endpointConstruction(){
 			// we add some extra tables to the dom here
 			absUrl = baseUri.toString() + path.toString();
-			ramlUrl = absUrl + '?raml';
+			validatedUrl = urlValidatorFn(absUrl);
+			ramlUrl = validatedUrl + '?raml';
 			// add stored items first
 			html += buildStoredProps(storage);
 			
@@ -192,6 +194,10 @@ ramlCode.methods.recurseTreeStarter = function(arr, path){
 			html += '</dl>';
 			html += '</li>';
 		}
+
+        function urlValidatorFn(url){
+            return url;
+        }
 	}
 	return html;
 }

@@ -1,12 +1,12 @@
 #%RAML 0.8
 ---
-title: Federal Collections
+title: TFM-Federal Collections
 version: v1
-baseUri: https://transparency.treasury.gov:443/services/api
+baseUri: http://vip-weblogic78:32515/services/api
 protocols: [ HTTP ]
 
-/fiscal_service/v1/debt/top/federal_collections:
-  description: Federal Collections
+/fiscal_service/v1/tfm/top/federal_collections:
+  description: TFM-Federal Collections
   get:
     queryParameters:
       fields:
@@ -70,160 +70,105 @@ protocols: [ HTTP ]
                 "$schema": "http://json-schema.org/draft-03/schema",
                 "id": "http://jsonschema.net",
                 "properties": {
-                  "reporting_date": {
+                  "bus_glossary_id1": {
+                    "type": "number",
+                    "description": "Business Glossary ID",
+                    "format": "10.2"
+                  },
+                  "business_line_cd1": {
+                    "type": "string",
+                    "description": "Business Line",
+                    "format": ""
+                  },
+                  "context_name1": {
+                    "type": "string",
+                    "description": "Context Name",
+                    "format": ""
+                  },
+                  "bus_glossary_term1": {
+                    "type": "string",
+                    "description": "Business Glossary Term Category",
+                    "format": ""
+                  },
+                  "bus_glossary_admin_status_cd1": {
+                    "type": "string",
+                    "description": "Business Glossary Administrative Status",
+                    "format": ""
+                  },
+                  "bus_glossary_abbrev1": {
+                    "type": "string",
+                    "description": "Business Glossary Business Term Abbreviation",
+                    "format": ""
+                  },
+                  "bus_glossary_definition1": {
+                    "type": "string",
+                    "description": "Business Glossary Definition",
+                    "format": ""
+                  },
+                  "bus_glossary_desc1": {
+                    "type": "string",
+                    "description": "Business Glossary Description",
+                    "format": ""
+                  },
+                  "bus_glossary_see_also_txt1": {
+                    "type": "string",
+                    "description": "Business Glossary See Also",
+                    "format": ""
+                  },
+                  "bus_glossary_background_txt1": {
+                    "type": "string",
+                    "description": "Business Glossary Background",
+                    "format": ""
+                  },
+                  "bus_glossary_term_dt1": {
                     "type": "date",
-                    "description": "Calendar Date",
+                    "description": "Business Glossary Term Date",
                     "format": "YYYY-MM-DD"
                   },
-                  "reporting_calendar_year": {
-                    "type": "year",
-                    "description": "Calendar Year",
-                    "format": "YYYY"
-                  },
-                  "reporting_fiscal_year": {
-                    "type": "year",
-                    "description": "Fiscal Year",
-                    "format": "YYYY"
-                  },
-                  "reporting_calendar_quarter": {
+                  "bus_glossary_source_txt1": {
                     "type": "string",
-                    "description": "Calendar Quarter Number",
+                    "description": "Business Glossary Source",
                     "format": ""
                   },
-                  "reporting_fiscal_quarter": {
+                  "bus_glossary_bureau_nm1": {
                     "type": "string",
-                    "description": "Fiscal Quarter Number",
+                    "description": "Business Glossary Bureau",
                     "format": ""
                   },
-                  "reporting_calendar_month": {
-                    "type": "month",
-                    "description": "Calendar Month Number",
-                    "format": "MM"
-                  },
-                  "reporting_fiscal_month": {
-                    "type": "month",
-                    "description": "Fiscal Month Number",
-                    "format": "MM"
-                  },
-                  "creditor_agency_id": {
+                  "bus_glossary_src_doc_section1": {
                     "type": "string",
-                    "description": "Agency ID",
+                    "description": "Business Glossary Source Document Section",
                     "format": ""
                   },
-                  "debt_type_code": {
+                  "bus_glossary_src_doc_page1": {
                     "type": "string",
-                    "description": "Debt Type Code",
+                    "description": "Business Glossary Source Document Page Number",
                     "format": ""
                   },
-                  "payment_type_id": {
+                  "bus_glossary_term_category1": {
+                    "type": "string",
+                    "description": "Business Glossary Term Category",
+                    "format": ""
+                  },
+                  "bus_glossary_html_src_ref_url1": {
+                    "type": "string",
+                    "description": "Business Glossary HTML Source Reference URL",
+                    "format": ""
+                  },
+                  "api_id1": {
                     "type": "number",
-                    "description": "Payment Type ID",
+                    "description": "API ID",
                     "format": "10.2"
                   },
-                  "payment_agency": {
+                  "report_pretty_nm1": {
+                    "type": "string",
+                    "description": "Report Pretty Name",
+                    "format": ""
+                  },
+                  "attribute_id1": {
                     "type": "number",
-                    "description": "Payment Agency ID",
+                    "description": "Attribute ID",
                     "format": "10.2"
-                  },
-                  "agency_site": {
-                    "type": "number",
-                    "description": "Agency Site ID",
-                    "format": "10.2"
-                  },
-                  "net_amount": {
-                    "type": "number",
-                    "description": "Total Net Amount",
-                    "format": "10.2"
-                  },
-                  "net_count": {
-                    "type": "number",
-                    "description": "Total Net Count",
-                    "format": "10.2"
-                  },
-                  "gross_amount": {
-                    "type": "number",
-                    "description": "Total Gross Amount",
-                    "format": "10.2"
-                  },
-                  "gross_count": {
-                    "type": "number",
-                    "description": "Total Gross Count",
-                    "format": "10.2"
-                  },
-                  "agency_site_name": {
-                    "type": "string",
-                    "description": "Agency Site Name",
-                    "format": ""
-                  },
-                  "source_agency_site": {
-                    "type": "number",
-                    "description": "Source Agency Site ID",
-                    "format": "10.2"
-                  },
-                  "agency_type": {
-                    "type": "string",
-                    "description": "Agency Site Type Code",
-                    "format": ""
-                  },
-                  "source_agency": {
-                    "type": "string",
-                    "description": "Source Agency Alpha",
-                    "format": ""
-                  },
-                  "payment_agency_nm": {
-                    "type": "string",
-                    "description": "Agency Name",
-                    "format": ""
-                  },
-                  "agency_type_code": {
-                    "type": "string",
-                    "description": "Agency Type Code",
-                    "format": ""
-                  },
-                  "source_agency_1": {
-                    "type": "number",
-                    "description": "Source Agency Numeric",
-                    "format": "10.2"
-                  },
-                  "debt_type_description": {
-                    "type": "string",
-                    "description": "Debt Type Description",
-                    "format": ""
-                  },
-                  "taxable": {
-                    "type": "string",
-                    "description": "Taxable Indicator",
-                    "format": ""
-                  },
-                  "payment_category": {
-                    "type": "string",
-                    "description": "Payment Category Description",
-                    "format": ""
-                  },
-                  "payment_source_code": {
-                    "type": "string",
-                    "description": "Payment Source Code",
-                    "format": ""
-                  },
-                  "payment_source_description": {
-                    "type": "string",
-                    "description": "Payment Source Description",
-                    "format": ""
-                  },
-                  "payment_type_code": {
-                    "type": "string",
-                    "description": "Payment Type Code",
-                    "format": ""
-                  },
-                  "payment_type_description": {
-                    "type": "string",
-                    "description": "Payment Type Description",
-                    "format": ""
-                  },
-                  "creditor_agency_nm": {
-                    "type": "string",
-                    "description": "Creditor Agency Name",
-                    "format": ""
                   },
                 }
               }

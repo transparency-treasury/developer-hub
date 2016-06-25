@@ -42,7 +42,7 @@ Request Parameters
 | Parameter | Format | Description |
 | ------------- | -------------| -------------|
 | apiKey | string | Your developer API key. |
-| responseFormat | string | Format to receive the result content. Allowed values are json, xml and csv. |
+| responseFormat | string | Format to receive the result content. Allowed values are json and xml, Default value is json. |
 
 Constraints
 
@@ -177,7 +177,7 @@ Request Parameters
 | apiKey | Yes | | string | Your developer API key. |
 | StartYear | No | First Available Year | YYYY | Starting fiscal year for the data to return (>=) in YYYY format. |
 | EndYear | No | Most Recent Available Year | YYYY | Ending fiscal year for the data to return (>=) in YYYY format. |
-| responseFormat | No | json | string | Format to receive the result content.  Allowed values are json, xml and csv. |
+| responseFormat | No | json | string | Format to receive the result content.  Allowed values are json and xml, Default value is json. |
 
 Constraints
 
@@ -186,7 +186,7 @@ Constraints
 
 Output
 
-* Output from this function is a JSON file. Example JSON output:
+* Output from this function is a JSON or XML file. Example JSON output:
   * <a target='blank' href='https://api.transparency.treasury.gov/services/api/v1/cir/results?apiKey=DEMOKEY'>Try it Out!</a>
 
 Examples
@@ -194,7 +194,9 @@ Examples
 * The following example would return the dataset in json format:
   * `..cir/results?apiKey=DEMO_KEY&responseFormat=json`
 
-
+* The following example would return data for the years 2007 through 2011 inclusive, in xml format:
+  * `..cir/results?apiKey=DEMO_KEY&StartYear=2007&EndYear=2011?responseFormat=xml`
+  
 [Top](#page_top)
 
 <div id="data" class="pageAnchor"></div>

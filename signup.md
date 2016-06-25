@@ -11,8 +11,10 @@ nav: signup
 Your API Key:
 
 * Should be kept private and should not be shared.
-* Give you access to API’s made available through transparency.treasury.gov
+* Give you access to APIs made available through transparency.treasury.gov
 
 To use your key, simply pass the key as a URL query parameter when making Web service requests. For example:
 
 ...?apiKey=DEMOKEY
+
+ 

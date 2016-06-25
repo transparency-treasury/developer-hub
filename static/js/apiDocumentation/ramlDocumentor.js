@@ -1,6 +1,6 @@
-'use strict'
+'use strict';
 
-ramlCode.data.workingOffline = true;
+ramlCode.data.workingOffline = false;
 
 ramlCode.methods.startRamlDocumentor = function(){
 	var base;
@@ -16,13 +16,15 @@ ramlCode.methods.startRamlDocumentor = function(){
 		console.log('static data');
 		ramlCode.methods.getRaml('./static/js/apiDocumentation/ramlFiles/ramlApi.raml', callback);
 	} else{
-		base = '';
-		console.log('live using ', base);
+        // we dont want to commit dev urls to github
+
+        base = 'https://api.transparency.treasury.gov/services/api/docs/api.raml';
+
+        console.log('live using ', base);
 		// starter url
-		// we dont want to commit this url to github
 		ramlCode.methods.getRaml(base, callback);
 	}
-}
+};
 
 ramlCode.methods.recurseStuff = function(output){
 	var ramlDiv,
@@ -37,17 +39,17 @@ ramlCode.methods.recurseStuff = function(output){
 	ramlCode.methods.addEventsToDomElements();
 
 	ramlCode.methods.startAsyncGetRequestsForFields();
-}
+};
 
 ramlCode.methods.openApiUrl = function(event){
 	if(event.target.dataset.absUrl){
 		window.open(event.target.dataset.absUrl);
 	}
-}
+};
 
 ramlCode.methods.toggleExpandAllCollapseAll = function(event){
 	ramlCode.methods.toggleAllCheckboxes(event.target.dataset.expandCollapseType);
-}
+};
 
 ramlCode.methods.toggleAllCheckboxes = function(toggleType){
 	var checkboxes, 
@@ -55,14 +57,14 @@ ramlCode.methods.toggleAllCheckboxes = function(toggleType){
 		checkbox,
 		checked;
 
-	checked = (toggleType === 'expand') ? true: false;
+    checked = ('expand' === toggleType);
 
 	checkboxes = document.getElementsByClassName('expand-collapse-checkbox');
 	for (i=0; i < checkboxes.length; i++){
 		checkbox = checkboxes[i];
 		checkbox.checked = checked;
 	}
-}
+};
 
 ramlCode.methods.addEventsToDomElements = function(){
 	var tryItOutButtons,
@@ -86,7 +88,7 @@ ramlCode.methods.addEventsToDomElements = function(){
 		link.removeEventListener('click', ramlCode.methods.toggleExpandAllCollapseAll, false);
 		link.addEventListener('click', ramlCode.methods.toggleExpandAllCollapseAll, false);
 	}
-}
+};
 
 ramlCode.methods.toggleLoader = function(divElement, toggleOn){
 	var i,
@@ -104,32 +106,36 @@ ramlCode.methods.toggleLoader = function(divElement, toggleOn){
 			divElement.removeChild(childNode);
 		}
 	}
-}
+};
 
 ramlCode.methods.startAsyncGetRequestsForFields = function(){
 	var endpointContainers,
 		url,
-		i;
+        i,
+        callbackFactory;
 
 	// find elements by class
 	endpointContainers = document.getElementsByClassName('endpoint-container');
 	// iterate them
 	for (i=0; i < endpointContainers.length; i++){
-		var endpointContainer = endpointContainers[i];
+        var endpointContainer = endpointContainers[i];
 		
 		// turn on loader
 		ramlCode.methods.toggleLoader(endpointContainer, true);
 		url = endpointContainer.dataset.ramlUrl;
 
-		function ElemStore(elem){
+        //function CallbackFactory () {}
+        callbackFactory = function(){};
+
+        callbackFactory.prototype.storeElem = function (elem){
 			var element; 
 
 			if (elem){
 				element = elem;
 			}
 
-			function set(element){
-				element = element;
+			function set(elem){
+				element = elem;
 			}
 
 			function callback(response){
@@ -140,29 +146,25 @@ ramlCode.methods.startAsyncGetRequestsForFields = function(){
 				set: set,
 				callback: callback
 			}
-		}
-
-		function callbackFactory() {};
-
-		callbackFactory.prototype.storeElem = ElemStore;
+		};
 
 		var newCallbackFn = new callbackFactory();
 		// start asysc on each element
 		if (ramlCode.data.workingOffline){
 			url = './static/js/apiDocumentation/ramlFiles/' + ramlCode.data.staticOffLineData.prodOffLineData[url];
-			ramlCode.methods.getRaml(url, newCallbackFn.storeElem(endpointContainer).callback);
+
+            ramlCode.methods.getRaml(url, newCallbackFn.storeElem(endpointContainer).callback);
 
 		} else{
 			ramlCode.methods.getRaml(url, newCallbackFn.storeElem(endpointContainer).callback);
 		}
 		
 	}
-}
+};
 
 ramlCode.methods.openRamlUrlCallback = function(response, element){
 	var baseData = ramlCode.methods.baseMasterObj.buildBaseArray(response),
 		unflattenData = ramlCode.methods.baseMasterObj.unflatten(baseData),
-		html,
 		foundItSchema,
 		fountItQueryParameters,
 		elementParent,
@@ -185,20 +187,14 @@ ramlCode.methods.openRamlUrlCallback = function(response, element){
 	}
 
 	ramlCode.methods.checkDescriptionLibrary();
-	// ramlCode.methods.addEventsToCopyElements(element.dataset.ramlUrl);
 
 	ramlCode.methods.toggleLoader(element);
-}	
+};
 
 ramlCode.methods.buildFieldTable = function(obj, elem){
-	// convert to array, 
-	// sort alphabetically
-	// build html
-	// insert into element
 	var key,
 		holder = [],
-		html = '<table class="available-fields-table">',
-		subList = '';
+		html = '<table class="available-fields-table">';
 
 	for (key in obj){
 		obj[key].key = key;
@@ -227,14 +223,12 @@ ramlCode.methods.buildFieldTable = function(obj, elem){
 	html += '</table>';
 
 	elem.innerHTML += html;
-}	
+};
 
 ramlCode.methods.buildParameterTable = function(obj, elem){
-	var key,
-		html = '<table class="parameter-definition-table">',
+	var html = '<table class="parameter-definition-table">',
 		i,
 		param,
-		holder = [],
 		paramObj = {},
 		propKeys,
 		rowObj;
