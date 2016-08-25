@@ -19,7 +19,6 @@ ramlCode.methods.startRamlDocumentor = function(){
         // we dont want to commit dev urls to github
 
         base = 'https://api.transparency.treasury.gov/services/api/docs/api.raml';
-
         console.log('live using ', base);
 		// starter url
 		ramlCode.methods.getRaml(base, callback);

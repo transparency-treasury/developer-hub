@@ -2,7 +2,7 @@
 
 ramlCode.methods.recurseTreeStarter = function(arr, path){
 	var html = '',
-		endpointLookup = {}, 
+		endpointLookup = {},
 		baseUri,
 		absUrl,
 		validatedUrl,
@@ -170,7 +170,11 @@ ramlCode.methods.recurseTreeStarter = function(arr, path){
 
 		function endpointConstruction(){
 			// we add some extra tables to the dom here
-			absUrl = baseUri.toString() + path.toString();
+			var newBase = baseUri.toString();
+			if(newBase.indexOf('https') === -1){
+				newBase = 'https://' + newBase;
+			}
+			absUrl = newBase + path.toString();
 			validatedUrl = urlValidatorFn(absUrl);
 			ramlUrl = validatedUrl + '?raml';
 			// add stored items first
