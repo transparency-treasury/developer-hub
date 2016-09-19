@@ -22,7 +22,7 @@ Each API below can be accessed through a base path, which should be added to the
 
 The Individual requests are appended to the path, as in:
 
-`https://api.transparency.treasury.gov/services/api/fiscal_service/v1/debt/tror/analytics_collection_delinquent_debt?pretty_print=no&limit=100&offset=0&apiKey=demoKey&format=csv`  
+`https://api.transparency.treasury.gov/services/api/fiscal_service/v1/debt/tror/analytics_collection_delinquent_debt?pretty_print=no&limit=100&offset=0&format=csv`  
 
 <div class="expand-collapse-section">
   <div>

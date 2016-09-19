@@ -1,6 +1,6 @@
 'use strict';
 
-ramlCode.data.workingOffline = false;
+ramlCode.data.workingOffline = true;
 
 ramlCode.methods.startRamlDocumentor = function(){
 	var base;
@@ -168,6 +168,7 @@ ramlCode.methods.openRamlUrlCallback = function(response, element){
 		fountItQueryParameters,
 		elementParent,
 		elementParameterTable;
+
 
 	// find fields and add them to the response
 	foundItSchema = ramlCode.methods.findNode('schema', unflattenData[5]);

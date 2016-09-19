@@ -2,7 +2,7 @@
 
 ramlCode.methods.recurseTreeStarter = function(arr, path){
 	var html = '',
-		endpointLookup = {},
+		endpointLookup = {}, 
 		baseUri,
 		absUrl,
 		validatedUrl,

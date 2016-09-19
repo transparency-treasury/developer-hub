@@ -128,8 +128,11 @@ ramlCode.methods.baseMasterObj = (function() {
 
 		// First map the nodes of the array to an object -> create a hash table.
 		for(var i = 0, len = arr.length; i < len; i++) {
-			
+
 			arrElem = arr[i];
+            if (!arrElem.key && !arrElem.value){
+                continue
+            }
 			mappedArr[arrElem.id] = arrElem;
 			mappedArr[arrElem.id]['children'] = [];
 		}

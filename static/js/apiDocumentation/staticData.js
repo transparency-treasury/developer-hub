@@ -75,7 +75,12 @@
 			"https://api.transparency.treasury.gov/services/api/fiscal_service/v1/accounting/od/exchange_rates?raml": 'exchange_rates.raml',
 			"https://api.transparency.treasury.gov/services/api/fiscal_service/v1/accounting/od/debt_outstanding?raml": 'debt_outstanding.raml',
 			"https://api.transparency.treasury.gov/services/api/fiscal_service/v1/accounting/od/slgs_statistics?raml": 'slgs_statistics.raml',
-			"https://api.transparency.treasury.gov/services/api/fiscal_service/v1/accounting/od/fip_rates_prices?raml": 'fip_rates_prices.raml'
+			"https://api.transparency.treasury.gov/services/api/fiscal_service/v1/accounting/od/fip_rates_prices?raml": 'fip_rates_prices.raml',
+			"https://api.transparency.treasury.gov/services/api/fiscal_service/v1/debt/tror/data_act_compliance?raml": 'data_act_compliance.raml',
+			"https://api.transparency.treasury.gov/services/api/fiscal_service/v1/revenue/rcm?raml": 'rcm.raml',
+			"https://api.transparency.treasury.gov/services/api/fiscal_service/v1/reference/data_registry/value_domain?raml": 'value_domain.raml',
+			"https://api.transparency.treasury.gov/services/api/fiscal_service/v1/reference/data_registry/situational_metadata?raml":'situational_metadata.raml',
+			"https://api.transparency.treasury.gov/services/api/fiscal_service/v1/reference/data_registry/business_rules?raml":'business_rules.raml'
 		}
 	);
 })();

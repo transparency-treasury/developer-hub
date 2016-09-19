@@ -61,44 +61,12 @@ traits:
   description: "Fiscal Service"
   /v1:
     description: "v1"
-    /tfm:
-      description: "TFM"
-      /top:
-        description: "Treasury Offset Program"
-        /federal_collections:
-          description: "TFM-Federal Collections"
-          is: [pageable]
-          get:
-            responses:
-              200:
-                body:
-                  application/xml:
-                  application/json:
-                  application/csv:
-              400:
-                body:
-                  application/json:
-
-        /state_programs:
-          description: "TFM-State Programs"
-          is: [pageable]
-          get:
-            responses:
-              200:
-                body:
-                  application/xml:
-                  application/json:
-                  application/csv:
-              400:
-                body:
-                  application/json:
-
     /debt:
-      description: "debt"
+      description: "Debt"
       /top:
         description: "Treasury Offset Program"
         /state_programs:
-          description: "TOP-State Programs"
+          description: "State Programs"
           is: [pageable]
           get:
             responses:
@@ -112,7 +80,7 @@ traits:
                   application/json:
 
         /federal_collections:
-          description: "TOP-Federal Collections"
+          description: "Federal Collections"
           is: [pageable]
           get:
             responses:
@@ -126,7 +94,7 @@ traits:
                   application/json:
 
       /tror:
-        description: "Treasury Report on Receivables"
+        description: "Treasury Report On Receivables"
         /analytics_delinquent_debt:
           description: "TROR-Analytics Delinquent Debt"
           is: [pageable]
@@ -365,10 +333,98 @@ traits:
                 body:
                   application/json:
 
+        /data_act_compliance:
+          description: "TROR-DATA Act Compliance"
+          is: [pageable]
+          get:
+            responses:
+              200:
+                body:
+                  application/xml:
+                  application/json:
+                  application/csv:
+              400:
+                body:
+                  application/json:
+
+    /tfm:
+      description: "TFM"
+      /top:
+        description: "Treasury Offset Program"
+        /state_programs:
+          description: "TFM-State Programs"
+          is: [pageable]
+          get:
+            responses:
+              200:
+                body:
+                  application/xml:
+                  application/json:
+                  application/csv:
+              400:
+                body:
+                  application/json:
+
+        /federal_collections:
+          description: "TFM-Federal Collections"
+          is: [pageable]
+          get:
+            responses:
+              200:
+                body:
+                  application/xml:
+                  application/json:
+                  application/csv:
+              400:
+                body:
+                  application/json:
+
     /accounting:
-      description: "accounting"
+      description: "Accounting"
       /od:
         description: "Open Data"
+        /debt_outstanding:
+          description: "OD-Debt Outstanding"
+          is: [pageable]
+          get:
+            responses:
+              200:
+                body:
+                  application/xml:
+                  application/json:
+                  application/csv:
+              400:
+                body:
+                  application/json:
+
+        /exchange_rates:
+          description: "OD-Exchange Rates"
+          is: [pageable]
+          get:
+            responses:
+              200:
+                body:
+                  application/xml:
+                  application/json:
+                  application/csv:
+              400:
+                body:
+                  application/json:
+
+        /slgs_statistics:
+          description: "OD-SLGS Statistics"
+          is: [pageable]
+          get:
+            responses:
+              200:
+                body:
+                  application/xml:
+                  application/json:
+                  application/csv:
+              400:
+                body:
+                  application/json:
+
         /fip_rates_prices:
           description: "OD-FIP Rates and Prices"
           is: [pageable]
@@ -411,8 +467,28 @@ traits:
                 body:
                   application/json:
 
-        /slgs_statistics:
-          description: "OD-SLGS Statistics"
+    /revenue:
+      description: "Revenue"
+      /rcm:
+        description: "Revenue Collections Management"
+        is: [pageable]
+        get:
+          responses:
+            200:
+              body:
+                application/xml:
+                application/json:
+                application/csv:
+            400:
+              body:
+                application/json:
+
+    /reference:
+      description: "Reference"
+      /data_registry:
+        description: "Data Registry"
+        /value_domain:
+          description: "Data Registry-Value Domain"
           is: [pageable]
           get:
             responses:
@@ -425,8 +501,8 @@ traits:
                 body:
                   application/json:
 
-        /debt_outstanding:
-          description: "OD-Debt Outstanding"
+        /situational_metadata:
+          description: "Data Registry-Situational Metadata"
           is: [pageable]
           get:
             responses:
@@ -439,8 +515,8 @@ traits:
                 body:
                   application/json:
 
-        /exchange_rates:
-          description: "OD-Exchange Rates"
+        /business_rules:
+          description: "Data Registry-Business Rules"
           is: [pageable]
           get:
             responses:
@@ -452,3 +528,4 @@ traits:
               400:
                 body:
                   application/json:
+

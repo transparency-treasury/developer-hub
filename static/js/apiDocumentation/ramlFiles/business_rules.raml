@@ -1,12 +1,12 @@
 #%RAML 0.8
 ---
-title: OD-Debt to the Penny
+title: Data Registry-Business Rules
 version: v1
 baseUri: https://api.transparency.treasury.gov/services/api
-protocols: [ HTTP ]
+protocols: [ HTTPS ]
 
-/fiscal_service/v1/accounting/od/debt_to_penny:
-  description: OD-Debt to the Penny
+/fiscal_service/v1/reference/data_registry/business_rules:
+  description: Data Registry-Business Rules
   get:
     queryParameters:
       fields:
@@ -15,21 +15,21 @@ protocols: [ HTTP ]
         description: Field parameter accepts a comma separated list of field names that the user wants to be returned in the response.
         example: fields=xxx,yyy,zzz
         required: false
-        default: 
+        default:
       filter:
         displayName: Filter
         type: string
         description: Filter is used to apply logic criteria to each field if necessary (lt, gt, lte, gte, eq, in).
         example: 1) filter=xxx:eq:value,yyy:lt:1,zzz:gt:10  2) filter=reporting_fiscal_year:in:(2007,2008,2009,2010)
         required: false
-        default: 
+        default:
       sort:
         displayName: Sorting
         type: string
         description: Sorting parameter accepts a comma separated list of field names that the user wants to sort the response by.
         example: sort=xxx,-yyy,zzz
         required: false
-        default: 
+        default:
       pretty_print:
         displayName: Pretty Print
         type: string
@@ -70,41 +70,26 @@ protocols: [ HTTP ]
                 "$schema": "http://json-schema.org/draft-03/schema",
                 "id": "http://jsonschema.net",
                 "properties": {
-                  "reporting_calendar_year": {
-                    "type": "year",
-                    "description": "Calendar Year",
-                    "format": "YYYY"
+                  "business_rule_code": {
+                    "type": "string",
+                    "description": "Business Rule Code",
+                    "format": ""
                   },
-                  "reporting_calendar_month": {
-                    "type": "month",
-                    "description": "Calendar Month Number",
-                    "format": "MM"
+                  "business_rule_desc": {
+                    "type": "string",
+                    "description": "Business Rule Description",
+                    "format": ""
                   },
-                  "data_date": {
-                    "type": "date",
-                    "description": "Data Date",
-                    "format": "YYYY-MM-DD"
-                  },
-                  "debt_held_public_amt": {
+                  "admin_id": {
                     "type": "number",
-                    "description": "Debt Held by the Public",
+                    "description": "Admin ID",
                     "format": "10.2"
                   },
-                  "intragov_hold_amt": {
+                  "business_rule_id": {
                     "type": "number",
-                    "description": "Intragovernmental Holdings",
+                    "description": "Business Rule ID",
                     "format": "10.2"
-                  },
-                  "tot_pub_debt_out_amt": {
-                    "type": "number",
-                    "description": "Total Public Debt Outstanding",
-                    "format": "10.2"
-                  },
-                  "reporting_calendar_day": {
-                    "type": "day",
-                    "description": "Calendar Day Number",
-                    "format": "DD"
-                  },
+                  }
                 }
               }
       400:
