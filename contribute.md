@@ -7,4 +7,4 @@ nav: contribute
 
 Follow us through GitHub ([@transparency-treasury](https://github.com/transparency-treasury/developer-hub)) to keep up-to-date on new APIs and updates as they become available.
 
-For questions, comments, or to report and issue, [contact us](https://transparency.treasury.gov/fir/contact).
+For questions, comments, or to report and issue, [contact us](https://transparency.treasury.gov/contact).

@@ -170,6 +170,7 @@ ramlCode.methods.recurseTreeStarter = function(arr, path){
 
 		function endpointConstruction(){
 			// we add some extra tables to the dom here
+			console.log(baseUri.toString())
 			var newBase = baseUri.toString();
 			if(newBase.indexOf('https') === -1){
 				newBase = 'https://' + newBase;
