@@ -50,18 +50,18 @@ ramlCode.methods.baseMasterObj = (function() {
 				thisLinePreSpaces = thisLine.match(/^\s*/)[0].length;
 				level = (thisLinePreSpaces === 0) ? 1: (thisLinePreSpaces/2) + 1;
 				thisLine = thisLine.replace(/\r?\n|\r/g, '');
-			    arr = thisLine.split(':');
-			    lineList = arr.splice(0,1);
-				lineList.push(arr.join(':')); 
+				arr = thisLine.split(':');
+				lineList = arr.splice(0,1);
+				lineList.push(arr.join(':'));
 				thisKey = lineList[0].trim();
 				thisValue = lineList[1].trim();
 				idFactory.recentLevelIds[level] = uniqueId;
 				newRow = {
-					id: uniqueId, 
-					parentid: idFactory.recentLevelIds[level - 1], 
-					level: level, 
-					key: thisKey, 
-					value: thisValue, 
+					id: uniqueId,
+					parentid: idFactory.recentLevelIds[level - 1],
+					level: level,
+					key: thisKey,
+					value: thisValue,
 					children: null
 				};
 
@@ -73,7 +73,7 @@ ramlCode.methods.baseMasterObj = (function() {
 					appJson = true;
 				}
 
-				if (level < schemaLevel){					
+				if (level < schemaLevel){
 					// push the json string / finsished parsing json
 					schemaRow.value = JSON.parse(concatJsonString);
 					output.push(schemaRow);
@@ -90,7 +90,7 @@ ramlCode.methods.baseMasterObj = (function() {
 						if (concatJsonString[concatJsonString.length - 1] === ','){
 							concatJsonString = concatJsonString.substring(0, concatJsonString.length-1);
 						}
-					} 
+					}
 
 					concatJsonString += trimmedString;
 				} else if (thisKey === 'schema' && thisValue === '|'){
@@ -103,7 +103,7 @@ ramlCode.methods.baseMasterObj = (function() {
 					output.push(newRow);
 				}
 			}
-			
+
 			if (thisLine.match(/---/g)){
 				startBuilding = true;
 				output.push({
@@ -128,54 +128,57 @@ ramlCode.methods.baseMasterObj = (function() {
 
 		// First map the nodes of the array to an object -> create a hash table.
 		for(var i = 0, len = arr.length; i < len; i++) {
-			
+
 			arrElem = arr[i];
+			if (!arrElem.key && !arrElem.value){
+				continue
+			}
 			mappedArr[arrElem.id] = arrElem;
 			mappedArr[arrElem.id]['children'] = [];
 		}
 
 		for (var id in mappedArr) {
-	     	if (mappedArr.hasOwnProperty(id)) {
-	      		mappedElem = mappedArr[id];
+			if (mappedArr.hasOwnProperty(id)) {
+				mappedElem = mappedArr[id];
 				// If the element is not at the root level, add it to its parent array of children.
-		        if (mappedElem.parentid) {
+				if (mappedElem.parentid) {
 
-		          	mappedArr[mappedElem['parentid']]['children'].push(mappedElem);
-		        }
-		        // If the element is at the root level, add it to first level elements array.
-		        else {
-		          	tree.push(mappedElem);
-		        }
-		    }
+					mappedArr[mappedElem['parentid']]['children'].push(mappedElem);
+				}
+				// If the element is at the root level, add it to first level elements array.
+				else {
+					tree.push(mappedElem);
+				}
+			}
 		}
 		return tree;
 	}
 
 	function flatten(data) {
-	    var result = {};
-	    function recurse (cur, prop) {
-	        if (Object(cur) !== cur) {
-	            result[prop] = cur;
-	        } else if (Array.isArray(cur)) {
-             	for(var i=0, l=cur.length; i<l; i++){
-                 	recurse(cur[i], prop + "[" + i + "]");
-	            	if (l == 0){
-	                	result[prop] = [];
-	            	}
-	        	}
-	        } else {
-	            var isEmpty = true;
-	            for (var p in cur) {
-	                isEmpty = false;
-	                recurse(cur[p], prop ? prop+"."+p : p);
-	            }
-	            if (isEmpty && prop){
-	                result[prop] = {};
-	            }
-	        }
-	    }
-	    recurse(data, "");
-	    return result;
+		var result = {};
+		function recurse (cur, prop) {
+			if (Object(cur) !== cur) {
+				result[prop] = cur;
+			} else if (Array.isArray(cur)) {
+				for(var i=0, l=cur.length; i<l; i++){
+					recurse(cur[i], prop + "[" + i + "]");
+					if (l == 0){
+						result[prop] = [];
+					}
+				}
+			} else {
+				var isEmpty = true;
+				for (var p in cur) {
+					isEmpty = false;
+					recurse(cur[p], prop ? prop+"."+p : p);
+				}
+				if (isEmpty && prop){
+					result[prop] = {};
+				}
+			}
+		}
+		recurse(data, "");
+		return result;
 	}
 
 	return {

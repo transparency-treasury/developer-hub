@@ -1,6 +1,6 @@
 'use strict';
 
-ramlCode.data.workingOffline = false;
+ramlCode.data.workingOffline = true;
 
 ramlCode.methods.startRamlDocumentor = function(){
 	var base;
