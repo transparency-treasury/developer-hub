@@ -56,12 +56,7 @@
 
 {% for fns in page.apiReferenceFunctions %}
 <script type="text/javascript">
-    {
-        {
-            fns
-        }
-    }
-    ();
+    ramlCode.methods.startRamlDocumentor();
 </script>
 {% endfor %}
 
