@@ -333,20 +333,6 @@ traits:
                 body:
                   application/json:
 
-        /data_act_compliance:
-          description: "TROR-DATA Act Compliance"
-          is: [pageable]
-          get:
-            responses:
-              200:
-                body:
-                  application/xml:
-                  application/json:
-                  application/csv:
-              400:
-                body:
-                  application/json:
-
     /tfm:
       description: "TFM"
       /top:
