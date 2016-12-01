@@ -8,3 +8,7 @@ The APIs made available on transparency.treasury.gov, originate from financial d
 Check out our [GitHub Pages site](http://transparency-treasury.github.io/developer-hub/)
 
 ----
+To get started, pull down the repo. 
+npm install
+npm start
+- have fun
