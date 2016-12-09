@@ -118,11 +118,9 @@ ramlCode.methods.startAsyncGetRequestsForFields = function () {
   // iterate them
   for (i = 0; i < endpointContainers.length; i++) {
     var endpointContainer = endpointContainers[i];
-    console.log(endpointContainer);
     // turn on loader
     ramlCode.methods.toggleLoader(endpointContainer, true);
     url = endpointContainer.dataset.ramlUrl;
-    console.log(url);
     //function CallbackFactory () {}
     callbackFactory = function () {
     };
