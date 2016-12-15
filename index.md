@@ -5,7 +5,7 @@ layout: default
 ---
 #### Overview
 
-The U.S. Department of the Treasury (Treasury) is committed to furthering openness and transparency in the federal government. This openness fosters accountability, allows for citizen participation, increases trust and confidence in the federal government, and ensures effective and efficient operations.
+The U.S. Department of the Treasury (Treasury) is committed to promoting openness and transparency in the federal government. This openness fosters accountability, allows for citizen participation, increases trust and confidence in the federal government, and ensures effective and efficient operations.
 
 To meet these objectives, the Treasury’s Bureau of the Fiscal Service (Fiscal Service) has developed a portal to make certain financial data it collects accessible to the public through transparency.treasury.gov.
 
