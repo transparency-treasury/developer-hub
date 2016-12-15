@@ -1,0 +1,7 @@
+web:
+  image: nginx:latest
+  ports:
+   - "3000:80"
+  volumes: 
+   - /home/devuser/developer_hub_ng2/trunk/dist/:/usr/share/nginx/html/
+  restart: always
