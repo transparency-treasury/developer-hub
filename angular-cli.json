@@ -1,7 +1,7 @@
 {
   "project": {
     "version": "1.0.0-beta.11-webpack.8",
-    "name": "trunk"
+    "name": "trunk2"
   },
   "apps": [
     {
@@ -15,7 +15,11 @@
       "prefix": "app",
       "mobile": false,
       "styles": [
-        "styles.css"
+        "styles.css",
+        "./assets/developer-hub/static/css/font-awesome.min.css",
+        "./assets/developer-hub/static/css/fonts.css",
+        "./assets/developer-hub/static/css/normalize.css",
+        "./assets/developer-hub/static/css/style.css"
       ],
       "scripts": [],
       "environments": {
