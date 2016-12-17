@@ -14,7 +14,7 @@ ramlCode.methods.startRamlDocumentor = function () {
 
   if (ramlCode.data.workingOffline) {
     console.log('static data');
-    ramlCode.methods.getRaml('./static/js/apiDocumentation/ramlFiles/ramlApi.raml', callback);
+    ramlCode.methods.getRaml('./static/js/apiDocumentation/ramlFiles/cloudRamlApi.raml', callback);
   } else {
     // we dont want to commit dev urls to github
 
