@@ -106,7 +106,9 @@
         "https://api.transparency.treasury.gov/services/api/fiscal_service/v1/revenue/rcm.raml": 'rcm.raml',
         "https://api.transparency.treasury.gov/services/api/fiscal_service/v1/reference/data_registry/value_domain.raml": 'value_domain.raml',
         "https://api.transparency.treasury.gov/services/api/fiscal_service/v1/reference/data_registry/situational_metadata.raml": 'situational_metadata.raml',
-        "https://api.transparency.treasury.gov/services/api/fiscal_service/v1/reference/data_registry/business_rules.raml": 'business_rules.raml'
+        "https://api.transparency.treasury.gov/services/api/fiscal_service/v1/reference/data_registry/business_rules.raml": 'business_rules.raml',
+        "https://api.transparency.treasury.gov/services/api/fiscal_service/v1/accounting/od/statement_net_cost.raml": 'statement_net_cost.raml',
+        "https://api.transparency.treasury.gov/services/api/fiscal_service/v1/payments/jfics/jfics_congress_report.raml": 'jfics_congress_report.raml'
       }
   );
 })();
