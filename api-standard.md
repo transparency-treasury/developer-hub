@@ -5,9 +5,9 @@ nav: api-standard
 ---
 
 
-# API Standard for Fiscal Services
+# API Standard for Fiscal Service
 
-### 1. Overivew
+### 1. Overview
 	
 This guide documents the framework used to develop APIs for Fiscal Service.  The framework should be used by the Bureau of the Fiscal Service for all public-facing APIs.  This provides consistency to the public user and allows APIs to be consolidated into a common portal. This version (v.1) contains elements that are still under development and may be subject to change as Fiscal Service continues to evaluate use of APIs.
 
@@ -220,7 +220,7 @@ The pagination header will contain the Link: header
 2.	Header:
 	1.	Link: ```<url first>```; rel=”first”, ```<url prev>```; rel=”prev”; ```<url  next>```;rel=”next”;```<url last>```;rel=”last”
 
-### 2.4 API Documenation (RAML)
+### 2.4 API Documentation (RAML)
 
 Summary listing of all available API endpoints: 
 
