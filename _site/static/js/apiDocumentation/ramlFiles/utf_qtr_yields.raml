@@ -2,7 +2,7 @@
 ---
 title: OD-Unemployment Trust Fund Quarter Yields
 version: v1
-baseUri: http://fir_jetty:8080/services/api
+baseUri: https://api.transparency.treasury.gov/services/api
 protocols: [ HTTP ]
 
 /fiscal_service/v1/accounting/od/utf_qtr_yields:
@@ -70,9 +70,9 @@ protocols: [ HTTP ]
                 "$schema": "http://json-schema.org/draft-03/schema",
                 "id": "http://jsonschema.net",
                 "properties": {
-                  "reporting_date": {
+                  "data_date": {
                     "type": "date",
-                    "description": "Calendar Date",
+                    "description": "Data Date",
                     "format": "YYYY-MM-DD"
                   },
                   "reporting_calendar_year": {
