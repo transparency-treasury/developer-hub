@@ -261,6 +261,34 @@ traits:
                 body:
                   application/json:
 
+        /title_xii:
+          description: "OD-Title XII"
+          is: [pageable]
+          get:
+            responses:
+              200:
+                body:
+                  application/xml:
+                  application/json:
+                  application/csv:
+              400:
+                body:
+                  application/json:
+
+        /interest_uninvested:
+          description: "OD-Interest Uninvested"
+          is: [pageable]
+          get:
+            responses:
+              200:
+                body:
+                  application/xml:
+                  application/json:
+                  application/csv:
+              400:
+                body:
+                  application/json:
+
     /payments:
       description: "payments"
       /jfics:
