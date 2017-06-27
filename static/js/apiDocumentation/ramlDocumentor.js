@@ -328,4 +328,4 @@ ramlCode.methods.checkDescriptionLibrary = function () {
       descSubSelection[0].innerHTML = staticDescLookup.staticApiDescriptions[descKey];
     }
   }
-}
+};
