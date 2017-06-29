@@ -189,10 +189,10 @@ ramlCode.methods.openRamlUrlCallback = function (response, element) {
   ramlCode.methods.toggleLoader(element);
 };
 
-ramlCode.methods.buildFieldTable = function (obj, elem) {
+ramlCode.methods.fieldTableHtml = function (obj) {
   var key,
-      holder = [],
-      html = '<table class="available-fields-table">';
+    holder = [],
+    html = '<table class="available-fields-table">';
 
   for (key in obj) {
     obj[key].key = key;
@@ -215,12 +215,15 @@ ramlCode.methods.buildFieldTable = function (obj, elem) {
     html += '<td>' + row.description + '</td>';
     html += '<td>' + row.type + '</td>';
     html += '<td>' + row.format + '</td>';
-    html += '</r>';
+    html += '</tr>';
   });
 
   html += '</table>';
+  return html;
+};
 
-  elem.innerHTML += html;
+ramlCode.methods.buildFieldTable = function (obj, elem) {
+  elem.innerHTML += ramlCode.methods.fieldTableHtml(obj);
 };
 
 ramlCode.methods.buildParameterTable = function (obj, elem) {
@@ -264,12 +267,12 @@ ramlCode.methods.buildParameterTable = function (obj, elem) {
     html += '<br><strong>Default</strong>: ' + ((rowObj.default) ? rowObj.default : 'None');
     html += '<br><strong>Example</strong>: ' + rowObj.example;
     html += '</dd></dl></td></tr>';
-  })
+  });
 
   html += '</html>';
 
   elem[0].innerHTML += html;
-}
+};
 
 ramlCode.methods.findNode = function (id, currentNode) {
   var i,
@@ -328,4 +331,4 @@ ramlCode.methods.checkDescriptionLibrary = function () {
       descSubSelection[0].innerHTML = staticDescLookup.staticApiDescriptions[descKey];
     }
   }
-};
+}

@@ -112,7 +112,6 @@ ramlCode.methods.recurseTreeStarter = function (arr, path) {
         html += (urlPiece) ? '<a href="#page_top" class="back-to-top-link">Top</a>' : '';
         html += '</dt>';
       }
-      ;
 
       if (obj.value) {
         html += '<dd>' + obj.value + '</dd>';

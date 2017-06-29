@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 ramlCode.methods.getRaml = function(url, callback){
 	var xmlhttp = new XMLHttpRequest();
@@ -14,4 +14,4 @@ ramlCode.methods.getRaml = function(url, callback){
 	}
 	xmlhttp.open("GET", url, true);
 	xmlhttp.send();
-}
+};
