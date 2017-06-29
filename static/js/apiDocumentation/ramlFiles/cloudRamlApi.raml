@@ -1,9 +1,9 @@
 #%RAML 0.8
 ---
 title: Financial Information Repository
-version: v1
+version: v1.0
 baseUri: https://api.transparency.treasury.gov/services/api
-protocols: [ HTTP ]
+protocols: [ HTTPS ]
 
 traits:
   - pageable:
@@ -65,8 +65,8 @@ traits:
       description: "Accounting"
       /od:
         description: "Open Data"
-        /gift_contributions:
-          description: "OD-Gift Contributions"
+        /gold_reserve:
+          description: "OD-Gold Reserve"
           is: [pageable]
           get:
             responses:
@@ -79,8 +79,8 @@ traits:
                 body:
                   application/json:
 
-        /qualified_tax:
-          description: "OD-Qualified Tax"
+        /interest_uninvested:
+          description: "OD-Interest Uninvested"
           is: [pageable]
           get:
             responses:
@@ -121,62 +121,6 @@ traits:
                 body:
                   application/json:
 
-        /slgs_statistics:
-          description: "OD-SLGS Statistics"
-          is: [pageable]
-          get:
-            responses:
-              200:
-                body:
-                  application/xml:
-                  application/json:
-                  application/csv:
-              400:
-                body:
-                  application/json:
-
-        /fip_rates_prices:
-          description: "OD-FIP Rates and Prices"
-          is: [pageable]
-          get:
-            responses:
-              200:
-                body:
-                  application/xml:
-                  application/json:
-                  application/csv:
-              400:
-                body:
-                  application/json:
-
-        /interest_expense:
-          description: "OD-Interest Expense"
-          is: [pageable]
-          get:
-            responses:
-              200:
-                body:
-                  application/xml:
-                  application/json:
-                  application/csv:
-              400:
-                body:
-                  application/json:
-
-        /avg_interest_rates:
-          description: "OD-Average Interest Rates"
-          is: [pageable]
-          get:
-            responses:
-              200:
-                body:
-                  application/xml:
-                  application/json:
-                  application/csv:
-              400:
-                body:
-                  application/json:
-
         /utf_qtr_yields:
           description: "OD-Unemployment Trust Fund Quarter Yields"
           is: [pageable]
@@ -191,8 +135,8 @@ traits:
                 body:
                   application/json:
 
-        /interest_cost_fund:
-          description: "OD-Interest Cost by Fund"
+        /avg_interest_rates:
+          description: "OD-Average Interest Rates"
           is: [pageable]
           get:
             responses:
@@ -233,8 +177,78 @@ traits:
                 body:
                   application/json:
 
-        /gold_reserve:
-          description: "OD-Gold Reserve"
+        /slgs_statistics:
+          description: "OD-SLGS Statistics"
+          is: [pageable]
+          get:
+            responses:
+              200:
+                body:
+                  application/xml:
+                  application/json:
+                  application/csv:
+              400:
+                body:
+                  application/json:
+
+        /interest_cost_fund:
+          description: "OD-Interest Cost by Fund"
+          is: [pageable]
+          get:
+            responses:
+              200:
+                body:
+                  application/xml:
+                  application/json:
+                  application/csv:
+              400:
+                body:
+                  application/json:
+
+        /fip_rates_prices:
+          description: "OD-FIP Rates and Prices"
+          is: [pageable]
+          get:
+            responses:
+              200:
+                body:
+                  application/xml:
+                  application/json:
+                  application/csv:
+              400:
+                body:
+                  application/json:
+
+        /interest_expense:
+          description: "OD-Interest Expense"
+          is: [pageable]
+          get:
+            responses:
+              200:
+                body:
+                  application/xml:
+                  application/json:
+                  application/csv:
+              400:
+                body:
+                  application/json:
+
+        /gift_contributions:
+          description: "OD-Gift Contributions"
+          is: [pageable]
+          get:
+            responses:
+              200:
+                body:
+                  application/xml:
+                  application/json:
+                  application/csv:
+              400:
+                body:
+                  application/json:
+
+        /qualified_tax:
+          description: "OD-Qualified Tax"
           is: [pageable]
           get:
             responses:
@@ -275,8 +289,112 @@ traits:
                 body:
                   application/json:
 
-        /interest_uninvested:
-          description: "OD-Interest Uninvested"
+        /record_setting_auction:
+          description: "Record Setting Auction"
+          is: [pageable]
+          get:
+            responses:
+              200:
+                body:
+                  application/xml:
+                  application/json:
+                  application/csv:
+              400:
+                body:
+                  application/json:
+
+    /revenue:
+      description: "Revenue"
+      /rcm:
+        description: "Revenue Collections Management"
+        is: [pageable]
+        get:
+          responses:
+            200:
+              body:
+                application/xml:
+                application/json:
+                application/csv:
+            400:
+              body:
+                application/json:
+
+    /reference:
+      description: "Reference"
+      /data_registry:
+        description: "Data Registry"
+        /value_domain:
+          description: "Data Registry-Value Domain"
+          is: [pageable]
+          get:
+            responses:
+              200:
+                body:
+                  application/xml:
+                  application/json:
+                  application/csv:
+              400:
+                body:
+                  application/json:
+
+        /situational_metadata:
+          description: "Data Registry-Situational Metadata"
+          is: [pageable]
+          get:
+            responses:
+              200:
+                body:
+                  application/xml:
+                  application/json:
+                  application/csv:
+              400:
+                body:
+                  application/json:
+
+        /business_rules:
+          description: "Data Registry-Business Rules"
+          is: [pageable]
+          get:
+            responses:
+              200:
+                body:
+                  application/xml:
+                  application/json:
+                  application/csv:
+              400:
+                body:
+                  application/json:
+
+        /fmr_situational_metadata:
+          description: "FMR Situational Metadata"
+          is: [pageable]
+          get:
+            responses:
+              200:
+                body:
+                  application/xml:
+                  application/json:
+                  application/csv:
+              400:
+                body:
+                  application/json:
+
+        /fmr_data_elements:
+          description: "FMR Data Elements"
+          is: [pageable]
+          get:
+            responses:
+              200:
+                body:
+                  application/xml:
+                  application/json:
+                  application/csv:
+              400:
+                body:
+                  application/json:
+
+        /fmr_enum_values:
+          description: "FMR ENUM Values"
           is: [pageable]
           get:
             responses:
@@ -599,68 +717,6 @@ traits:
 
         /federal_collections:
           description: "TFM-Federal Collections"
-          is: [pageable]
-          get:
-            responses:
-              200:
-                body:
-                  application/xml:
-                  application/json:
-                  application/csv:
-              400:
-                body:
-                  application/json:
-
-    /revenue:
-      description: "Revenue"
-      /rcm:
-        description: "Revenue Collections Management"
-        is: [pageable]
-        get:
-          responses:
-            200:
-              body:
-                application/xml:
-                application/json:
-                application/csv:
-            400:
-              body:
-                application/json:
-
-    /reference:
-      description: "Reference"
-      /data_registry:
-        description: "Data Registry"
-        /value_domain:
-          description: "Data Registry-Value Domain"
-          is: [pageable]
-          get:
-            responses:
-              200:
-                body:
-                  application/xml:
-                  application/json:
-                  application/csv:
-              400:
-                body:
-                  application/json:
-
-        /situational_metadata:
-          description: "Data Registry-Situational Metadata"
-          is: [pageable]
-          get:
-            responses:
-              200:
-                body:
-                  application/xml:
-                  application/json:
-                  application/csv:
-              400:
-                body:
-                  application/json:
-
-        /business_rules:
-          description: "Data Registry-Business Rules"
           is: [pageable]
           get:
             responses:
