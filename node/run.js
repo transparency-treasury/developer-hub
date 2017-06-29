@@ -10,6 +10,7 @@ ramlCode = {
   },
   methods: {}
 };
+
 ramlCode.methods.getRaml = require('./substituteGet').localHttp;
 const ramlToJs = require('../static/js/apiDocumentation/raml_to_js');
 const ramlDocumentor = require('../static/js/apiDocumentation/ramlDocumentor');
