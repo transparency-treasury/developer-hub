@@ -123,7 +123,8 @@
       "https://api.transparency.treasury.gov/services/api/fiscal_service/v1/reference/data_registry/fmr_enum_values.raml": 'fmr_enum_values.raml',
       "https://api.transparency.treasury.gov/services/api/fiscal_service/v1/reference/data_registry/fmr_situational_metadata.raml": 'fmr_situational_metadata.raml',
       "https://api.transparency.treasury.gov/services/api/fiscal_service/v1/reference/data_registry/fmr_data_elements.raml": 'fmr_data_elements.raml',
-      "https://api.transparency.treasury.gov/services/api/fiscal_service/v1/payments/jfics/jfics_congress_report.raml": 'jfics_congress_report.raml'
+      "https://api.transparency.treasury.gov/services/api/fiscal_service/v1/payments/jfics/jfics_congress_report.raml": 'jfics_congress_report.raml',
+      "https://api.transparency.treasury.gov/services/api/fiscal_service/v1/payments/jfics/jfics_agency_xref.raml": 'jfics_agency_xref.raml'
     }
   );
 })();
