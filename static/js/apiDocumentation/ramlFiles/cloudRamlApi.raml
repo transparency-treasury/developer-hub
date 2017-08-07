@@ -411,6 +411,20 @@ traits:
       description: "payments"
       /jfics:
         description: "Judgment Fund"
+        /jfics_agency_xref:
+          description: "JFICS Agency Cross Reference"
+          is: [pageable]
+          get:
+            responses:
+              200:
+                body:
+                  application/xml:
+                  application/json:
+                  application/csv:
+              400:
+                body:
+                  application/json:
+
         /jfics_congress_report:
           description: "JFICS Congressional Report"
           is: [pageable]
