@@ -7,7 +7,7 @@ ramlCode.methods.startRamlDocumentor = function () {
 
   function callback(response) {
     var baseData = ramlCode.methods.baseMasterObj.buildBaseArray(response),
-        unflattenData = ramlCode.methods.baseMasterObj.unflatten(baseData);
+      unflattenData = ramlCode.methods.baseMasterObj.unflatten(baseData);
 
     ramlCode.methods.recurseStuff(unflattenData);
   }
@@ -27,7 +27,7 @@ ramlCode.methods.startRamlDocumentor = function () {
 
 ramlCode.methods.recurseStuff = function (output) {
   var ramlDiv,
-      html;
+    html;
 
   html = ramlCode.methods.recurseTreeStarter(output, '');
 
@@ -52,9 +52,9 @@ ramlCode.methods.toggleExpandAllCollapseAll = function (event) {
 
 ramlCode.methods.toggleAllCheckboxes = function (toggleType) {
   var checkboxes,
-      i,
-      checkbox,
-      checked;
+    i,
+    checkbox,
+    checked;
 
   checked = ('expand' === toggleType);
 
@@ -67,11 +67,11 @@ ramlCode.methods.toggleAllCheckboxes = function (toggleType) {
 
 ramlCode.methods.addEventsToDomElements = function () {
   var tryItOutButtons,
-  // ramlButtons,
-      expandCollapse,
-      i,
-      button,
-      link;
+    // ramlButtons,
+    expandCollapse,
+    i,
+    button,
+    link;
 
   tryItOutButtons = document.getElementsByClassName('try-it-out-button');
   expandCollapse = document.getElementsByClassName('expand-collapse');
@@ -91,8 +91,8 @@ ramlCode.methods.addEventsToDomElements = function () {
 
 ramlCode.methods.toggleLoader = function (divElement, toggleOn) {
   var i,
-      childNode,
-      childNodes;
+    childNode,
+    childNodes;
 
   if (toggleOn) {
     divElement.classList.add('loader-container');
@@ -109,9 +109,9 @@ ramlCode.methods.toggleLoader = function (divElement, toggleOn) {
 
 ramlCode.methods.startAsyncGetRequestsForFields = function () {
   var endpointContainers,
-      url,
-      i,
-      callbackFactory;
+    url,
+    i,
+    callbackFactory;
 
   // find elements by class
   endpointContainers = document.getElementsByClassName('endpoint-container');
@@ -162,11 +162,11 @@ ramlCode.methods.startAsyncGetRequestsForFields = function () {
 
 ramlCode.methods.openRamlUrlCallback = function (response, element) {
   var baseData = ramlCode.methods.baseMasterObj.buildBaseArray(response),
-      unflattenData = ramlCode.methods.baseMasterObj.unflatten(baseData),
-      foundItSchema,
-      fountItQueryParameters,
-      elementParent,
-      elementParameterTable;
+    unflattenData = ramlCode.methods.baseMasterObj.unflatten(baseData),
+    foundItSchema,
+    fountItQueryParameters,
+    elementParent,
+    elementParameterTable;
 
   // find fields and add them to the response
   foundItSchema = ramlCode.methods.findNode('schema', unflattenData[5]);
@@ -189,19 +189,10 @@ ramlCode.methods.openRamlUrlCallback = function (response, element) {
   ramlCode.methods.toggleLoader(element);
 };
 
+
+
 ramlCode.methods.fieldTableHtml = function (obj) {
-  var key,
-    holder = [],
-    html = '<table class="available-fields-table">';
-
-  for (key in obj) {
-    obj[key].key = key;
-    holder.push(obj[key]);
-  }
-
-  html += '<thead><tr><th>Field</th><th>Description</th><th>Type</th><th>Format</th></tr></thead>';
-
-  holder.sort(function (a, b) {
+  function alphaDesc(a, b) {
     if (a.description > b.description) {
       return 1;
     }
@@ -209,13 +200,58 @@ ramlCode.methods.fieldTableHtml = function (obj) {
       return -1;
     }
     return 0;
-  }).forEach(function (row) {
+  }
+
+  function hasReporting(field) {
+    return field.startsWith('reporting_fiscal') || field.startsWith('reporting_calendar');
+  }
+
+  function customFieldOrder(a, b) {
+    if (a.key === 'data_date') {
+      return -1;
+    }
+    if (b.key === 'data_date') {
+      return 1;
+    }
+
+    if (hasReporting(a.key)) {
+      return 1
+    }
+    if (hasReporting(b.key)) {
+      return -1
+    }
+
+    return alphaDesc(a, b);
+  }
+
+  function alphaFields(a, b) {
+    if (a.key > b.key) {
+      return 1;
+    }
+    if (a.key < b.key) {
+      return -1;
+    }
+    return 0;
+  }
+
+  var key,
+    holder = [],
+    html = '<table class="available-fields-table">\n';
+
+  for (key in obj) {
+    obj[key].key = key;
+    holder.push(obj[key]);
+  }
+
+  html += '<thead>\n<tr><th>Field</th><th>Description</th><th>Type</th><th>Format</th></tr>\n</thead>\n';
+
+  holder.sort(alphaFields).sort(customFieldOrder).forEach(function (row) {
     html += '<tr>';
     html += '<td>' + row.key + '</td>';
     html += '<td>' + row.description + '</td>';
     html += '<td>' + row.type + '</td>';
     html += '<td>' + row.format + '</td>';
-    html += '</tr>';
+    html += '</tr>\n';
   });
 
   html += '</table>';
@@ -228,16 +264,16 @@ ramlCode.methods.buildFieldTable = function (obj, elem) {
 
 ramlCode.methods.buildParameterTable = function (obj, elem) {
   var html = '<table class="parameter-definition-table">',
-      i,
-      param,
-      paramObj = {},
-      propKeys,
-      rowObj;
+    i,
+    param,
+    paramObj = {},
+    propKeys,
+    rowObj;
 
   // reorgainize data
   for (i = 0; i < obj.children.length; i++) {
     param = obj.children[i];
-    paramObj[param.key] = {'paramName': param.key};
+    paramObj[param.key] = { 'paramName': param.key };
 
     param.children.forEach(function (row) {
       paramObj[param.key][row.key] = row.value;
@@ -276,8 +312,8 @@ ramlCode.methods.buildParameterTable = function (obj, elem) {
 
 ramlCode.methods.findNode = function (id, currentNode) {
   var i,
-      currentChild,
-      result;
+    currentChild,
+    result;
 
   if (id == currentNode.key) {
     return currentNode;
@@ -305,13 +341,13 @@ ramlCode.methods.checkDescriptionLibrary = function () {
   // update description
 
   var descriptions,
-      i,
-      desc,
-      descVal,
-      statLib,
-      descSubSelection,
-      descKey,
-      staticDescLookup;
+    i,
+    desc,
+    descVal,
+    statLib,
+    descSubSelection,
+    descKey,
+    staticDescLookup;
 
   staticDescLookup = ramlCode.methods.staticDataStore.get();
 
