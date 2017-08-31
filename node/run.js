@@ -1,4 +1,6 @@
 const cheerio = require('cheerio');
+const beautify = require('js-beautify').js_beautify;
+const tidy = require('htmltidy').tidy;
 const fs = require('fs');
 const path = require('path');
 
@@ -27,7 +29,7 @@ function callback(response) {
   //ramlCode.methods.recurseStuff(unflattenData);
   html = ramlCode.methods.recurseTreeStarter(unflattenData, '');
   $html = cheerio.load(html);
-  $html('.endpoint-container').each(function(i, elm) {
+  $html('.endpoint-container').each(function (i, elm) {
     const _url = $html(this).attr('data-raml-url');
     const url = './static/js/apiDocumentation/ramlFiles/' + ramlCode.data.staticOffLineData.prodOffLineData[_url];
 
@@ -52,7 +54,7 @@ function subRamlCallback(response, element, filePath) {
 
   if (foundItSchema) {
     htmlTable = ramlCode.methods.fieldTableHtml(foundItSchema.value.properties);
-    writeFile(htmlTable, filePath )
+    writeFile(htmlTable, filePath)
   }
 }
 
@@ -61,12 +63,20 @@ function writeFile(content, fileName) {
   const fn = _fn.replace('https___api_transparency_treasury_gov_services_api_fiscal_service_v1_', '');
   const fp = path.join('./htmlTableOutput', fn) + '.html';
 
-  fs.writeFile(fp, content, function(err) {
-    if(err) {
-      return console.log(err);
-    }
+  const opts = {
+    doctype: 'html5',
+    hideComments: false, //  multi word options can use a hyphen or "camel case"
+    indent: true
+  };
 
-    console.log(fp, "The file was saved!");
+  tidy(content, opts, function (err, html) {
+    fs.writeFile(fp, html, function (err) {
+      if (err) {
+        return console.log(err);
+      }
+
+      console.log(fp, "The file was saved!");
+    });
   });
 }
 
