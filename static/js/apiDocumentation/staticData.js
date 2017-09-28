@@ -117,14 +117,12 @@
       "https://api.transparency.treasury.gov/services/api/fiscal_service/v1/accounting/od/statement_net_cost.raml": 'statement_net_cost.raml',
       "https://api.transparency.treasury.gov/services/api/fiscal_service/v1/accounting/od/record_setting_auction.raml": 'record_setting_auction.raml',
       "https://api.transparency.treasury.gov/services/api/fiscal_service/v1/revenue/rcm.raml": 'rcm.raml',
-      "https://api.transparency.treasury.gov/services/api/fiscal_service/v1/reference/data_registry/value_domain.raml": 'value_domain.raml',
-      "https://api.transparency.treasury.gov/services/api/fiscal_service/v1/reference/data_registry/situational_metadata.raml": 'situational_metadata.raml',
-      "https://api.transparency.treasury.gov/services/api/fiscal_service/v1/reference/data_registry/business_rules.raml": 'business_rules.raml',
       "https://api.transparency.treasury.gov/services/api/fiscal_service/v1/reference/data_registry/fmr_enum_values.raml": 'fmr_enum_values.raml',
       "https://api.transparency.treasury.gov/services/api/fiscal_service/v1/reference/data_registry/fmr_situational_metadata.raml": 'fmr_situational_metadata.raml',
       "https://api.transparency.treasury.gov/services/api/fiscal_service/v1/reference/data_registry/fmr_data_elements.raml": 'fmr_data_elements.raml',
       "https://api.transparency.treasury.gov/services/api/fiscal_service/v1/payments/jfics/jfics_congress_report.raml": 'jfics_congress_report.raml',
-      "https://api.transparency.treasury.gov/services/api/fiscal_service/v1/payments/jfics/jfics_agency_xref.raml": 'jfics_agency_xref.raml'
+      "https://api.transparency.treasury.gov/services/api/fiscal_service/v1/payments/jfics/jfics_agency_xref.raml": 'jfics_agency_xref.raml',
+      "https://api.transparency.treasury.gov/services/api/fiscal_service/v1/debt/tror/tror.raml": 'tror.raml'
     }
   );
 })();
