@@ -53,7 +53,9 @@ function subRamlCallback(response, element, filePath) {
   fountItQueryParameters = ramlCode.methods.findNode('queryParameters', unflattenData[5]);
 
   if (foundItSchema) {
+    console.log(foundItSchema.value);
     htmlTable = ramlCode.methods.fieldTableHtml(foundItSchema.value.properties);
+
     writeFile(htmlTable, filePath)
   }
 }
